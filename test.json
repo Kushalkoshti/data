@@ -1,0 +1,3024 @@
+[
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Framework With a Stylized Network Model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Chuanwen Dong1and Rod Franklin2"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "1ESCP Business School"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "2Kuehne Logistics University"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Despite the increasing academic interest and ﬁnancial support for the Physical Internet (PI)",
+  "Column2": " surprisingly little is known about its opera-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tionalization and implementation. In this paper",
+  "Column2": " we suggest studying the PI on the basis of the Digital Internet (DI)",
+  "Column3": " which is a well-estab-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "lished entity. We propose a conceptual framework for the PI network using the DI as a starting point",
+  "Column2": " and ﬁnd that the PI network not only"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "needs to solve the reachability problem",
+  "Column2": " that is",
+  "Column3": " how to route an item from A to B",
+  "Column4": " but also must confront a more complicated optimality prob-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "lem",
+  "Column2": " that is",
+  "Column3": " how to dynamically optimize a set of additional logistics-related metrics such as cost",
+  "Column4": " emissions and time for a shipment. These last"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "issues are less critical for the DI and handled using relatively simpler procedures. Based on our conceptual framework",
+  "Column2": " we then propose a sim-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ple network model using graph theory to support the operationalization of the PI. The model covers the characteristics of the PI raised in the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "current literature and suggests future directions for further quantitative analyses."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Keywords : physical internet; digital internet; conceptual framework; model; operationalization"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "INTRODUCTION"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "There are a growing number of concerns about current logistics"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and transportation systems. From an economic perspective",
+  "Column2": " trans-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "portation costs are steadily rising",
+  "Column2": " which erodes the bene ﬁts of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "all other supply chain cost-saving efforts (Boston Consulting"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Group 2015). From a social perspective",
+  "Column2": " the over-utilized road"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "network brings substantial “stress ”to our society regarding acci-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "dents",
+  "Column2": " noise",
+  "Column3": " air pollution",
+  "Column4": " etc. (Maibach et al.",
+  "Column5": " 2007). From an"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "environmental perspective",
+  "Column2": " whereas all other industry sectors are"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "steadily reducing greenhouse gas emissions",
+  "Column2": " the transportation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "sector is",
+  "Column2": " unfortunately",
+  "Column3": " increasing these emissions (EUROSTAT"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "2015)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Clearly",
+  "Column2": " the business-as-usual logistics industry is not sustain-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "able and disruptive innovations are urgently needed. The Physi-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cal Internet (PI)",
+  "Column2": " originally described by Montreuil (2011)",
+  "Column3": " is"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "regarded as such a paradigm-breaking concept to tackle the “lo-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "gistics sustainability grand challenge ”. Ballot et al. (2014) and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Mervis (2014)",
+  "Column2": " have further elaborated the concept of the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "They use the Digital Internet (DI)",
+  "Column2": " which is a well-established"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "artifact and widely-accepted service technology",
+  "Column2": " to illustrate its"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "potential as a design metaphor for the PI. The classical analogy"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "is",
+  "Column2": " whereas the Digital Internet transfers digital data in packets"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "smoothly among users",
+  "Column2": " the Physical Internet moves physical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "objects seamlessly through an open and interconnected logistics"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "network."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Despite its highlighted advantages",
+  "Column2": " the PI has received serious"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "criticisms. Recent research by Sternberg and Norrman (2017)"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "among others",
+  "Column2": " has challenged the PI by questioning a lack of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "developed business models that can illustrate how to move from"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the concept to its adoption. Their thoughts coincide with",
+  "Column2": " forexample",
+  "Column3": " Cimon (2014) and Pan et al. (2017)",
+  "Column4": " that the implemen-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tation of the PI remains a challenge. Treiblmaier et al. (2016)"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "point out that PI speci ﬁc theories focusing on the advancement"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "of the PI concept are also lacking. So far",
+  "Column2": " the research on the PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "has primarily focused on its conceptual development and the pro-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "mised effect thereof. Knowledge on the operationalization of the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "PI remains limited."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Several studies have started to exploit PI operationalization"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in topics such as protocol building (Montreuil et al.",
+  "Column2": " 2012)",
+  "Column3": " PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "routing optimization (Sarraj et al. 2014)",
+  "Column2": " and modular container"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "selection (Lin et al. 2014). The motivation of this paper is not"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "to solve a speci ﬁc PI problem. Instead",
+  "Column2": " we investigate from a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "more fundamental perspective: What are the unique features of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the PI",
+  "Column2": " and how should these features be integrated into rigor-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ous theories to support the PI ’s implementation. By answering"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "this question",
+  "Column2": " we wish to obtain a more generalized understand-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ing of the PI that can be used as a starting point for future PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "research."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Motivated by this objective",
+  "Column2": " our aim is to begin ﬁlling in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "this research gap by introducing a conceptual framework for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "modeling ﬂows within the PI",
+  "Column2": " as well as a highly stylized"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "model based on analogies to the Digital Internet. We begin by"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "investigating the conceptual origin of the PI",
+  "Column2": " its analogical rela-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tionship to the DI",
+  "Column2": " and establish our framework based on this"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "analogy. There are two reasons for this initiative: (1) Since the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "DI is a metaphor for the PI",
+  "Column2": " there must exist similarities"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "between the two",
+  "Column2": " from their namesake to models and imple-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "mentations; and (2) the DI is a well-established artifact with"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "well-known features and an extensive literature body on its"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "operations. The history of the development of the DI",
+  "Column2": " how it"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "has come to be governed",
+  "Column2": " the challenges it has faced in scaling"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "security",
+  "Column2": " privacy and trust",
+  "Column3": " its operation through a layered pro-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tocol approach",
+  "Column2": " and many other aspects of its growth provide a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "starting point for considering similar issues with respect to the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "PI. However",
+  "Column2": " since both the DI and the PI are extremelyCorresponding author:"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Chuanwen Dong",
+  "Column2": " Heubnerweg 8-10",
+  "Column3": " 14059 Berlin",
+  "Column4": " Germany;"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "E-mail :cdong@escp.eu.Journal of Business Logistics ",
+  "Column2": 2020,
+  "Column3": " 1 –12 doi: 10.1111\/jbl.12253"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "© 2020 The Authors. Journal of Business Logistics published by Wiley Periodicals LLC"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "on behalf of Council of Supply Chain Management Professionals"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "This is an open access article under the terms of the Creative Commons Attribution License",
+  "Column2": " which permits use",
+  "Column3": " distribution and reproduction in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "any medium",
+  "Column2": " provided the original work is properly cited."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "complex systems",
+  "Column2": " it is beyond the scope of this paper to create"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "a comprehensive “one-to-one ”comparison between them or to"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "solve all the PI “problems. ”Instead",
+  "Column2": " the purpose of this paper"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "is to support the PI theory building process and the practicalimplementation of the PI. Given this purpose",
+  "Column2": " this paper aimsto answer the following two research questions:"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "1 What are the primary similarities and differences between the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "DI and the PI?"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "2 What might be a simple",
+  "Column2": " but useful model that supports"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "research into",
+  "Column2": " as well as",
+  "Column3": " the implementation of the PI?"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "By examining these two questions",
+  "Column2": " we conduct a comparison"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "between the DI and the PI",
+  "Column2": " and take the lessons learned from this"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "comparison to propose a stylized model of the PI. Though themodel is simple",
+  "Column2": " it captures the distinct characteristics of the PImentioned in Montreuil (2011) and employs approaches fromclassical transportation theories (such as shortest path anddynamic traf ﬁc assignment) to study the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The rest of the paper is organized as follows. In Section 2"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "we review the related literature",
+  "Column2": " and in Section 3",
+  "Column3": " we reportthe structure of the Digital Internet. In Section 4",
+  "Column4": " we discusswhy ﬂow optimization in the Physical Internet involves differ-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ent complexities than those found in the Digital Internet. On"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the basis of this discussion",
+  "Column2": " we propose a stylized network"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "model of the Physical Internet and suggest a heuristic solutionin Section 5. Finally",
+  "Column2": " we discuss future research avenues inSection 6."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "LITERATURE REVIEW"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Our work is closely related to three streams of literature: the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "classical computer network literature of the Digital Internet",
+  "Column2": " theemerging Physical Internet literature",
+  "Column3": " and the classical transporta-tion engineering literature."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The digital internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The DI is arguably the largest system ever created by mankind"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "with billions of connected devices",
+  "Column2": " including computers",
+  "Column3": " phones"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "or any equipment with a sensor (Kurose and Ross 2016). The"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "early concept of the DI dates back to Licklider and Clark (1962)",
+  "Column2": "who envisioned a group of globally interconnected computers fordata transmission. Over the years",
+  "Column3": " the DI has revolutionizedworldwide data communications (Leiner et al. 2009). Speci ﬁ-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cally",
+  "Column2": " a reliable data delivery is secured by the so-called Trans-mission Control Protocol\/Internet Protocol (TCP\/IP) originatedby Cerf and Kahn (1974). New protocols",
+  "Column3": " such as multi-protocollabel switching (MPLS)",
+  "Column4": " are being used as intermediate routingprotocols to facilitate traf ﬁc engineering services that are dif ﬁcult"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "or impossible to implement using TCP\/IP (Farrel",
+  "Column2": " 2020). These"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "protocols allow DI traf ﬁc engineers to shape data and message"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬂows to avoid congested paths and speed up traf ﬁcﬂow. Inter-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ested readers can obtain additional information on the foundationof the DI and digital networking in general through the studiesby Petersen and Davie (2011)",
+  "Column2": " Comer (2014)",
+  "Column3": " Kurose and Ross(2016)",
+  "Column4": " etc.In this paper",
+  "Column5": " we use this stream of literature as the foundation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "for the analogies that inform the concept of the Physical Internetand establish a general foundation for its composition."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The physical internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The PI is proposed as an analogy of the DI for managing the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬂow of physical objects",
+  "Column2": " with the special purpose of increasing"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the ef ﬁciency and sustainability of logistics systems (Montreuil"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "2011). Despite being a relatively new concept (the ﬁrst mention"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "of the Physical Internet appeared in an article in the June 17",
+  "Column2": "2006 edition of The Economist (Markillie 2006))",
+  "Column3": " it has attractedmuch attention from various stakeholders. The research on the PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "spreads over various topics in logistics",
+  "Column2": " such as container stan-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "dardization (Lin et al. 2014); delivery schedule optimization(Yao 2017); vehicle routing optimization (Walha et al. 2016);city logistics (Mohamed et al. 2017); intermodal transportation(Sun et al. 2018); synchromodal transportation (Ambra et al.2019); PI-enabled information systems (Chen et al. 2018); coor-dination of production",
+  "Column2": " inventory",
+  "Column3": " and transportation (Ji et al.2019); and vendor-managed inventory management (Pan et al.2015)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "While the aforementioned articles have begun to examine"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "many of the facets of what a PI might look like or the challenges"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "that such a concept must address",
+  "Column2": " notable criticisms of the idea"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "remain. It is still not clear",
+  "Column2": " for example",
+  "Column3": " how the PI can be oper-ationalized (Sternberg and Norrman 2017)",
+  "Column4": " and there is a lack ofPI-speci ﬁc theories that advance the knowledge of the current"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "logistics literature (Treiblmaier et al. 2016)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "A promising start to support the implementation and theory-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "building concerning the PI is to understand its distinct featureswhen compared to digital networking structures and the DI. Anumber of researchers have followed this logic. Montreuil et al.(2012) propose a seven-layer Open Logistics Interconnectionmodel inspired by the seven-layer ISO Open Systems Intercon-nection model. Sarraj et al. (2012) explore the analogies between"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "a Digital Internet network and a logistics service network demon-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "strating the potential for ef ﬁciency improvements by following"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "similar practices. More recently",
+  "Column2": " Sarraj et al. (2014) proposenovel transportation protocols for the PI and evaluate their staticperformance via simulation-based optimization."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Compared to the previous PI literature",
+  "Column2": " we offer a more com-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "prehensive comparison between the DI and the PI and highlightdistinct features that need to be addressed in future PI studies.We then propose and illustrate how to integrate these featuresinto a stylized PI model",
+  "Column2": " which establishes a link to the classicaltransportation theories for future PI research. More speci ﬁcally"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "our proposed model covers a wide variation of the PI problem"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "such as real-time",
+  "Column2": " multi-objective",
+  "Column3": " and network equilibrium",
+  "Column4": "which makes it more realistic than those currently covered in theliterature."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Classical transportation theories"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Although the context of our model is the PI",
+  "Column2": " its mathematical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "structure is similar to that found in the literature on classicaltransportation problems",
+  "Column2": " whose richness and rigor could be ofgreat help in developing more rigorous theories concerning the2 C. Dong and R. FranklinPI. Our model is especially close to models of the shortest path"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problem and the dynamic traf ﬁc assignment problem."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The shortest path problem studies how a single traveler ﬁnds a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "shortest route (in terms of cost",
+  "Column2": " time",
+  "Column3": " emissions",
+  "Column4": " etc.) betweentwo vertices (or nodes) of a transportation network. Over theyears",
+  "Column5": " this problem has developed various extensions. For exam-ple",
+  "Column6": " the parameters are time-dependent",
+  "Column7": " the cost terms are subjectto capacity constraints",
+  "Column8": " or the objective is multi-dimensional.Interested readers should refer to",
+  "Column9": " for example",
+  "Column10": " Ahuja et al.(1993)",
+  "Column11": " Pardalos et al. (2005)",
+  "Column12": " Zhu and Wilhelm (2007)",
+  "Column13": " Lozanoand Medaglia (2013)",
+  "Column14": " Case y et al. (2014)",
+  "Column15": " Duque et al. (2015)"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Shi et al. (2017)",
+  "Column2": " and Madkour et al. (2017) for reviews and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "recent advances."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "While each traveler independently manages his\/her shortest"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "path optimization",
+  "Column2": " the joint actions of all travelers might uninten-tionally lead to congestion in the transportation network andeventually prevent the travelers from achieving their predesignedoptimality. Dynamic traf ﬁc assignment models (e.g.",
+  "Column3": " Merchant"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and Nemhauser",
+  "Column2": " 1978) ﬁnd equilibria for such problems. These"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "algorithms generally require an iterative framework including thecalculation of shortest paths of the individuals and the adjustmentof route choices toward an equilibrium. Extensive reviews of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "these models can be found in",
+  "Column2": " for example",
+  "Column3": " Hoogendoorn and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Bovy (2001)",
+  "Column2": " Peeta and Ziliaskopoulos (2001)",
+  "Column3": " Rakha and Taw-ﬁk (2009)",
+  "Column4": " Szeto and Wong (2012)",
+  "Column5": " and Wang et al. (2018)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "In this paper",
+  "Column2": " we discuss how our PI model can be linked to"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the classical shortest path problem and the dynamic traf ﬁc"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "assignment problem. To the best of our knowledge",
+  "Column2": " we areamong the ﬁrst to discuss and encourage such connections."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "THE DIGITAL INTERNET"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Since we aim to consult the Digital Internet (DI) to guide the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "design and operationalization of the Physical Internet (PI)",
+  "Column2": " weare primarily interested in the following two questions concern-ing the DI: 1) How is the DI structured and 2) How is data"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "transmitted in the DI. In this section",
+  "Column2": " we ﬁrst present a simple"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "but representative network within the DI (called a computer net-work in the computer science literature) and then discuss datatransmission by brie ﬂy explaining the relevant Internet protocols."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The internet networks"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The DI is a complex engineering system that connects billions of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "devices all over the world and",
+  "Column2": " theoretically",
+  "Column3": " allows every deviceto communicate with all others. To this extent",
+  "Column4": " it is hard todescribe the whole DI. For simplicity",
+  "Column5": " we show a basic outlineusing some critical structures of the DI in Figure 1. We believethis simpli ﬁed picture is representative of the more complex"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "structure of the DI",
+  "Column2": " and suf ﬁcient for the descriptive purposes of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "this paper."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Internet users could be governmental",
+  "Column2": " commercial",
+  "Column3": " or private"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "entities",
+  "Column2": " all equipped with terminal devices such as computers orsmart phones. The users insert ﬂows into the DI in the form of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "digital data",
+  "Column2": " which is sealed in data packets and transmitted via anetwork of communication links. Routers direct the data ﬂows in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the network",
+  "Column2": " physical media such as copper and optical cables orair-based processes carry the data ﬂows over the links",
+  "Column3": " and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "modems\/cable terminal systems allow data to be switchedbetween different physical media. The Internet services are oper-ated by various Internet Service Providers (ISPs)",
+  "Column2": " which ensuresmooth ﬂows of all kinds of digital information."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "We use the term “router ”as a general term to cover the func-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tions of classic routers",
+  "Column2": " switches and hubs. We recognize thatthere are signi ﬁcant differences in the functioning of these"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "devices as independent entities. However",
+  "Column2": " today ’s modern routers"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "have become general purpose devices incorporating the function-ality of all three of these technologies",
+  "Column2": " thus our use of the term"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“router ”in its more modern manifestation."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The internet protocols"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The operationalization of the Digital Internet",
+  "Column2": " or more speci ﬁ-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cally",
+  "Column2": " the smooth data transmission in the DI",
+  "Column3": " would not be pos-sible without standards. Internet protocols have been introducedto standardize and organize its operationalization. A protocoldeﬁnes the format of the packets of digital information"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "exchanged between peers in the DI",
+  "Column2": " how hosts should beaddressed",
+  "Column3": " as well as the actions taken in the transmission of thepackets across the DI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The protocols have evolved over time to be organized in a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "layered architecture (Clark 1988). A network layer is often a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "mixed implementation of hardware and software and focuses ona speci ﬁc type of information transmission. When taken together"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the collection of protocols at various layers becomes the “proto-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "col stack. ”The classic Internet protocol stack consists of ﬁve"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "layers: the physical",
+  "Column2": " link",
+  "Column3": " network",
+  "Column4": " transport",
+  "Column5": " and application lay-ers (Postel 1981). It should be noted that the Internet followswhat was originally known as the Department of Defense (DoD)Internet Protocol suite (Clark 1988). This protocol suite evolvedindependently from the International Organization for Standard-ization (ISO) Open Systems Interconnection (OSI) seven-layermodel and",
+  "Column6": " while similar in many ways to the OSI model",
+  "Column7": " also"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "differs considerably from that model (Ennis 1983). We refer the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "interested readers to Kurose and Ross (2016) for the historicalbackground of the ISO model",
+  "Column2": " although “"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in fact",
+  "Column2": " the inventors of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the original OSI model probably did not have the Internet inmind when creating it ”(Kurose and Ross 2016",
+  "Column2": " p.53). Since we"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "want to compare the PI with the classical Digital Internet struc-ture",
+  "Column2": " we stick to the ﬁve-layer DoD model to describe the ﬂow"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "of messages in the Digital Internet. This approach differs fromother authors who have generally employed the OSI seven layermodel (e.g.",
+  "Column2": " Montreuil et al. 2012) to de ﬁne a layered approach"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "to the PI. The function of each of the layers in the DoD Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "protocol stack is brie ﬂy outlined in Table 1."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "All the hardware and software components of the DI work"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "under the contracts designed by these protocols. Whereas proto-cols in each layer focus on speci ﬁc tasks",
+  "Column2": " the operation of proto-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cols across all ﬁve layers provides an operational solution to the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "reachability problem : how to transmit data from A to B. This"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "function is",
+  "Column2": " after all",
+  "Column3": " what the Internet was created for. Consider-ing the billions of users and vast amount of data transmitted overthe Internet",
+  "Column4": " solving the reachability problem is a tremendousaccomplishment in and of itself. Note that the reachability prob-lem",
+  "Column5": " as de ﬁned here",
+  "Column6": " is addressed in the Internet through a subsetA stylized model for the Physical Internet 3of the DoD protocol stack",
+  "Column7": " the Transmission Control Protocol\/"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Internet Protocol",
+  "Column2": " which is today more generally known as TCP\/IP (Clark 1988)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "FROM THE DIGITAL INTERNET TO THE PHYSICAL"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "INTERNET"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The Physical Internet is regarded as a conceptual analog of the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Digital Internet. We ﬁrst discuss the similarities and then thedifferences between the two concepts",
+  "Column2": " with a special focus on"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the logistics-relevant metrics embedded in the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Similarities between the DI and the PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Inspired by the Digital Internet network in Figure 1",
+  "Column2": " we present"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "part of the Physical Internet network in Figure 2."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "PI users could be both commercial and private shippers. They"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "insert ﬂows into the PI in the form of various physical objects"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "such as groceries and consumer goods",
+  "Column2": " which are packed intostandardized packages in packing stations and then transported in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "a network of physical corridors. Mixing\/distribution centers"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "direct the package ﬂows in the network",
+  "Column2": " transportation modes"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "such as road or rail carry the package ﬂows",
+  "Column2": " and intermodal ter-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "minals allow cargo to switch between different transportationmodes. The PI services are operated by various Logistics ServiceProviders (LSPs)",
+  "Column2": " which secure smooth deliveries of all kinds ofphysical objects."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "By comparing Figure 2 with Figure 1",
+  "Column2": " additional similarities"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "between the DI and the PI can be summarized (Table 2). Manyof the distinct attributes of the PI",
+  "Column2": " such as collaboration betweendifferent parties in the PI",
+  "Column3": " can be traced to their counterparts inthe DI. Note that this analysis only shows general comparisons"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "between the DI and the PI. Its objective is to provide a better"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "understanding of the two concepts going beyond their name-sakes. More advanced and\/or exceptional cases are always possi-ble. For example",
+  "Column2": " not all physical objects can be packed intostandardized boxes. Some cargo will require special handling inpacking",
+  "Column3": " storing",
+  "Column4": " etc. Typical of this example would be bulkcargo such as crude oil or grains",
+  "Column5": " large-sized machinery parts",
+  "Column6": "hazardous goods",
+  "Column7": " and so on."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "In its de ﬁnition",
+  "Column2": " the PI offers seamless interconnections of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "logistics services (Montreuil et al. 2013). In the light of thiscommitment",
+  "Column2": " the PI is",
+  "Column3": " despite all its other bene ﬁts",
+  "Column4": "ﬁrstly an"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "interconnected logistics system composed of a network of logis-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tics networks. It should be able to deliver any physical item fromany origin A to any destination B. As a result",
+  "Column2": " the reachabilityModem\/cable "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "terminal systemRouter PC Mobile phone"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Fiber cable Ethernet cable Wireless\/airHome networkNa\/g415onal or global ISP"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Local or regional ISPFigure 1: A simple schematic of part of the Digital Internet."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Table 1: How data ﬂow is operationalized in a ﬁve-layer Inter-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "net protocol model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Layer Operation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Application"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "LayerCommunicates applications\/services between"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "separate Internet users. An example is an email"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "application that sends an email from onecomputer to another."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Transport"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "LayerEstablishes the connection between Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "users to send data and keeps track of thesending process."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Network"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "LayerManages the routing of a data packet as it"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "traverses the Internet from the sender to thereceiver. The DI uses a connectionless modelallowing the network itself to route a messagefrom origination address to destination address"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "using a “best effort ”approach to the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "transmission of the packets."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Link Layer Governs the data transmission within a single"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "connection",
+  "Column2": " for example",
+  "Column3": " the ﬁber connection."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Physical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "LayerEnsures that the 0\/1 digital data are transmitted"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "over the physical media of the connection (e.g.",
+  "Column2": "theﬁber connection mentioned before).4 C. Dong and R. Franklinproblem should be the ﬁrst problem to confront. This problem is"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "conceptually similar to the reachability problem addressed by theDI. In the process of delivering a physical object",
+  "Column2": " there arenumerous protocol-like international agreements that standardizetheﬂows and ensure the smooth deliveries of cargos across the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "world (e.g.",
+  "Column2": " Incoterms",
+  "Column3": " customs agreements",
+  "Column4": " international modallegislation",
+  "Column5": " international postal agreements). Prior work in the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "area of PI shipments by Montreuil et al. (2012) uses a seven-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "layer physical transportation protocol stack to model how freightmight ﬂow over the PI. Their model breaks the task of shipping"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "an item over the PI into seven interconnected layers of smallertasks facilitating the ef ﬁcient and standardized movement of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "freight. This detailed breakdown of tasks",
+  "Column2": " while organizedslightly differently from our ﬁve-layer comparison",
+  "Column3": " is structurally"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "similar to the comparison provided in Table 2. Hofman et al.(2017) examine differences between the PI layers proposed byMontreuil et al. (2012) and the layers of the DI giving additionalinsights into the similarities (and differences) between PI and DI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "activities as outlined in Table 2."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The design of the DI and its protocols provide users with a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“connection-free ”service: They can simply use the DI without a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "need to understand how their data will be routed from its origi-nation point to its destination. A similar “connection-free ”ser-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "vice can be implemented in the PI: A PI user should be able totrust the PI and its services to ship their goods to any destinationwithout knowing (or caring) about the route that the goods take.An LSP controlling several key nodes in the network can routethe shipment via any convenient route so long as it arrives as peragreement between the shipper and LSP. For example",
+  "Column2": " when a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "box is sent from Beijing to Brussels",
+  "Column2": " the detailed route",
+  "Column3": " Beijing –-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Tianjin –Rotterdam –Brussels",
+  "Column2": " can remain anonymous and the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "exact route taken is left up to the operational considerations ofthe LSP and their quality of service agreements with the shipper."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Differences between the DI and the PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Although the PI is regarded as an analog of the DI",
+  "Column2": " they are two"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "completely different things. The basic unit transported by the DIis digital data",
+  "Column2": " electronic 0s and 1s. In other words",
+  "Column3": " a ﬂow in the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "DI can be exclusively represented by a sequence of standardizedhigh or low voltage values",
+  "Column2": " light pulses",
+  "Column3": " or carrier waveamplitudes and frequencies. The binary nature of signals used to"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "encode information in digital packets establishes the basis of theDI and all relevant applications and protocols are designed basedon this fundamental fact."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "In the world of the PI",
+  "Column2": " however",
+  "Column3": " the basic ﬂow consists of var-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ious physical objects that may be quite different from each other.There is no such thing as a standardized 0\/1 unit that is the fun-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "damental building block of these physical objects. Even if differ-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ent physical objects can be packed into the same standardizedboxes",
+  "Column2": " and these boxes are treated equally in the PI by the LSPs",
+  "Column3": "the boxes are valued differently from the eyes of the PI usersbecause of their contents. Users probably do not care if theyreceive the same box in each shipment",
+  "Column4": " but they do care if whatis in the box is different from what they expect."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The Internet also employs the concept of packet retransmis-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "sion",
+  "Column2": " which allows packets that have been lost or discarded dueto congestion at a router to be retransmitted after a period oftime. Retransmission of physical goods is a costly undertaking"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and something that no user of the PI would appreciate seeing"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "happen. Transporting physical objects instead of transmitting dig-ital signals",
+  "Column2": " therefore",
+  "Column3": " requires additional effort in physical distri-bution. Important logistics metrics",
+  "Column4": " therefore",
+  "Column5": " in physicaldistribution need to be confronted. These metrics can be sortedintoﬁve major categories: cost",
+  "Column6": " time",
+  "Column7": " schedule",
+  "Column8": " emissions",
+  "Column9": " and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "capacity."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Cost"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Whereas sending an email incurs trivial variable cost linked toelectricity consumption (infrastructure costs are generallyincluded in the bandwidth and connection fees charged by ISPsand carriers)",
+  "Column2": " distributing a physical object incurs substantialvariable costs linked to transportation modes",
+  "Column3": " packing andunpacking",
+  "Column4": " loading and unloading in distribution centers",
+  "Column5": " etc.These shipment costs are linked to the ﬂow of each single object"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in the PI and are oftentimes the most critical factor for PI users.Note",
+  "Column2": " the cost here not only means the monetary fee paid for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "logistics services",
+  "Column2": " but also the externalities such as accidents"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "noise",
+  "Column2": " pollution",
+  "Column3": " and congestion (because of its increasing impor-tance",
+  "Column4": " emissions are listed as a separate metric below)",
+  "Column5": " whichcan be internalized (e.g.",
+  "Column6": " Maibach",
+  "Column7": " Schreyer",
+  "Column8": " Sutter",
+  "Column9": " van Essen",
+  "Column10": "et al. 2007)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Cargo Packing sta\/g415on Mixing\/distribu\/g415on center"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Terminal Road connec\/g415on Rail connec\/g415onNa\/g415onal or global LSPLocal or regional LSP"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "End userFigure 2: A simple schematic of part of the Physical Internet.A stylized model for the Physical Internet 5Time"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Since digital signals are traveling almost at the speed of the light"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "their lags in the DI are",
+  "Column2": " in most scenarios",
+  "Column3": " negligible. The ﬂow-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ing speed and arrival time of physical objects in the PI",
+  "Column2": " which issubject to transportation modes",
+  "Column3": " availability of labor",
+  "Column4": " handling"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "time in the transshipment nodes",
+  "Column2": " etc.",
+  "Column3": " are critical to PI users.Transit times are not negligible and vary signi ﬁcantly by network"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "routing decisions."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Schedule"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The transmission of digital information is almost instantaneous."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Should problems arise in the transmission process",
+  "Column2": " the speed at"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "which rerouted signals or retransmitted packets travel makedelays negligible (note that there are exceptions for certain infor-mation ﬂows requiring continuous streaming or assured delivery)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "These facts mean that for most users of the DI the scheduling ofinformation deliveries is not generally a concern. However",
+  "Column2": " theschedule of ﬂow in the PI is a dynamic and potentially problem-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "atic process subject to the real-time status of the network. Forexample",
+  "Column2": " if congestion arises or a vehicle breaks down",
+  "Column3": " newroutings may need to be implemented that lead to delayed deliv-eries. Such delays are of concern to shippers",
+  "Column4": " customers",
+  "Column5": " and ser-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "vice providers as they may generate penalties and lost business"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and other additional costs."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Emissions"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Although the running of electronic devices in the DI requires sig-niﬁcant energy",
+  "Column2": " the marginal energy consumption of sending an"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "email is almost negligible. The emissions from the DI can be"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "regarded as a “ﬁxed cost ”term that is linked to the rigid infras-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tructures",
+  "Column2": " but not to the size of the data transmitted. In the PI",
+  "Column3": "however",
+  "Column4": " emissions primarily arise from the movements of thephysical objects. The emissions from the PI are a “variable ”term"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and are proportional to the goods delivered. This provides anincentive for shippers and logistics service providers to reduceemissions via ef ﬁcient logistics operations."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Capacity"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "In the DI",
+  "Column2": " routers frequently send data packets to test the conges-tion of adjacent routes and routers. If data transmission in onepathway is congested",
+  "Column3": " the router can immediately use other ave-nues for transmission. The allocation of capacities in each routeisﬂexible",
+  "Column4": " and it is more critical that the entire network has suf-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬁcient capacity for all data transmissions. In the PI",
+  "Column2": " however"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "capacity is a strict bound for each participant in the network. Forexample",
+  "Column2": " if a truck is fully loaded",
+  "Column3": " additional goods must wait"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "for the next available truck. A spontaneous shift to another trans-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "portation mode could be much costly or even impossible. Thisrequires sophisticated capacity management for each freightmovement in the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Theﬁve metrics outlined above do not stand alone. As noted"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "they are often inter-connected and appear together. LSPs mightwant to quote their service to the PI user by combining cost withtime using their evaluation of the transit route reliability and theuser ’s speci ﬁed quality of service requirements. Because users"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "downstream service providers and customers are interested in thescheduled movement of the goods",
+  "Column2": " real-time updates of the state of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the PI are required. For example",
+  "Column2": " after the user has contracted for a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "speciﬁc time and service level using the PI",
+  "Column2": " an accident occurs and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "blocks part of the original planned route. In this case",
+  "Column2": " the PI shouldbe able to provide immediate updates and reoptimize the entireroute. Given the originally negotiated terms",
+  "Column3": " PI users might wantto accept proposed changes in cost and\/or service level based onTable 2: The similarities between the Physical Internet and the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Digital Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Physical internet Digital internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "User Private and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "commercial shippersPrivate and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "commercial Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "users"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Flow Physical objects Digital dataUnit of the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬂowStandardized"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "packages",
+  "Column2": " forexample",
+  "Column3": " standardcontainers",
+  "Column4": " theMODULUSCHCABox (EuropeanCommission 2016)Data packets"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Routing of the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬂowPorts",
+  "Column2": " cross dock"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "facilities"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "distribution centers",
+  "Column2": "multi-modal transfercenters",
+  "Column3": " etc.Routers and switches"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Carrier of the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬂowTransportation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "modes",
+  "Column2": " for example",
+  "Column3": "roads",
+  "Column4": " rail",
+  "Column5": " sea",
+  "Column6": " air",
+  "Column7": "inland waterway",
+  "Column8": "pipelinePhysical medias",
+  "Column9": " for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "example",
+  "Column2": " coaxial",
+  "Column3": "ﬁber",
+  "Column4": " air (wireless)"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Protocols Standardized sending\/"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "receiving processesFive-layer Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "protocol model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Service"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "providersLogistics service"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "providersInternet service"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "providers"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Collaboration"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "betweenoperatorsTransshipment and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "revenue sharingbetween differentLSPs",
+  "Column2": " groupageservices",
+  "Column3": " palletnetworksRoaming and revenue"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "sharing betweendifferent ISPs"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Collaboration"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "between usersShared transportation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "services",
+  "Column2": " sharedwarehousing",
+  "Column3": " etc.Peer-to-peer"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "networking",
+  "Column2": "intranets",
+  "Column3": " etc."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Collaboration"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "between auser and anoperator3PL services Dedicated access"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "lines (e.g.",
+  "Column2": " T1 links)"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ownership of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "basicinfrastructurePartly government-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "owned (highways",
+  "Column2": "bridges",
+  "Column3": " etc.)Primarily privately"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "owned (by theISPs)",
+  "Column2": " but somegovernmentownership",
+  "Column3": " forexample",
+  "Column4": " nationaltelephone carriers"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "etc.6 C. Dong and R. Franklinthe state changes of the PI",
+  "Column2": " stick to their old plans and accept"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "delays",
+  "Column2": " or seek to penalize their service providers for failing to liveup to their negotiated commitments. In addition",
+  "Column3": " optimal plans atthe individual shipment level need to be consolidated to predict thestatus of the PI network",
+  "Column4": " which further in ﬂuences the individual"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "planning problems in a recursive fashion."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The DI also needs to solve optimization problems. The short-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "est path algorithm is used for routing data packets in a local areanetwork by minimizing the number of jumps in the routing pro-cess. In a pure IP network",
+  "Column2": " the shortest path is chosen even if itbecomes congested. Congestion management is historically han-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "dled through relatively simple procedures. The basic procedure is"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "to simply discard packets when a router or a link becomes over-loaded and retransmit them. More advanced approaches",
+  "Column2": " whichvary by router manufacturers",
+  "Column3": " are based on back-off signals thatrequire sending nodes to delay a random amount of their trans-mission",
+  "Column4": " change packet size",
+  "Column5": " reroute packets",
+  "Column6": " etc. More recentand sophisticated traf ﬁc engineering approaches look at band-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "width scheduling and prioritization of packet ﬂows for IP-based"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "messages. For example",
+  "Column2": " multi-protocol label switching (MPLS)allows a network manager to manage traf ﬁcﬂows in a more"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬁne-grained and prioritized manner than standard TCP\/IP. MPLS"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "is the primary way that network service providers condition and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "prioritize traf ﬁcﬂows for video and voice."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Even though the DI also needs to perform some optimizations"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in its operations",
+  "Column2": " for example",
+  "Column3": " dynamically leveling network loadat hubs and maximizing the robustness of transfers",
+  "Column4": " they aremostly handled digitally or through simple manual rules andtherefore have little impact on the metrics (e.g.",
+  "Column5": " cost",
+  "Column6": " emissions",
+  "Column7": "schedules) of the entire system. For each single freight move-ment in the PI",
+  "Column8": " various logistics metrics must be jointly includedin the solution process as parameters",
+  "Column9": " constraints",
+  "Column10": " and\/or objec-tive functions. Considering the large size of the DI and PI sys-tems",
+  "Column11": " even one additional constraint could impact solution"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "efﬁciency. The incorporation of the various logistics metrics that"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "do not exist in the DI can make the complexity of the PI signi ﬁ-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cantly greater than that of the DI. To highlight this complexity",
+  "Column2": "the PI not only needs to solve the reachability problem",
+  "Column3": " that is",
+  "Column4": "routing from A to B",
+  "Column5": " but also must confront a much more com-plex optimality problem",
+  "Column6": " that is",
+  "Column7": " optimizing the logistics metricsin the physical distribution activities."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "A STYLIZED MODEL OF THE PHYSICAL INTERNET"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The aforementioned comparison between the DI and the PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "reveals a number of unique features of the PI. Based on theseunique features",
+  "Column2": " an initial model to support the implementation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "of the PI should incorporate at least the following elements:"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The diverse participants that make up the PI",
+  "Column2": " such as packing"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "stations",
+  "Column2": " distribution centers",
+  "Column3": " transportation modes",
+  "Column4": " and corri-dors"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The logistics metrics",
+  "Column2": " such as cost",
+  "Column3": " time",
+  "Column4": " and emissions"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "which de ﬁne acceptable performance for each participant in a"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "logistics network."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The dynamics and time-dependent constructs for each ship-ment in the network.The representation of the reachability and optimality problemsof the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "As a starting point for such a model",
+  "Column2": " we propose a simple"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "graph theoretic model of the PI covering its distinct features and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "discuss the connections between the shipment of a single object"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and the classical shortest path problem. After that",
+  "Column2": " we discussthe simultaneous shipments of multiple objects in the networkand the connections to the dynamic traf ﬁc assignment problem."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Model formulation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Consider a directed graph G¼ðV",
+  "Column2": "EÞconsisting of a nonempty"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬁnite set Vof vertices",
+  "Column2": " and a nonempty ﬁnite set Eof edges"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "(Figure 3). The graph Ghas a distinguished source vertex s∈V"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and a sink vertex r∈V",
+  "Column2": " representing the sender and the receiver"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "of the shipment. Other elements in set V",
+  "Column2": " denoted as"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ðv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": 1,
+  "Column2": "v2",
+  "Column3": "⋯",
+  "Column4": "vMÞ",
+  "Column5": " represent the infrastructures in the PI",
+  "Column6": " such as"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "packing stations (the black vertices)",
+  "Column2": " routing centers",
+  "Column3": " distribution"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "centers",
+  "Column2": " and terminals. The elements in set E",
+  "Column3": " denoted as"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ðe1",
+  "Column2": "e2",
+  "Column3": "⋯",
+  "Column4": "eNÞ",
+  "Column5": " are ordered pairs of distinct vertices",
+  "Column6": " specifying"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the transportation corridors between two infrastructures in thePhysical Internet."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Each edge with index i∈Nis associated with a weight"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "w"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "e"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "iðce"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": "le"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": "me"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": "qe"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": "tÞ",
+  "Column3": " representing the ﬁve logistics metrics discussed"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in Section 4.2. The weight is a ﬁve-element vector",
+  "Column2": " expressing in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "period t",
+  "Column2": " the transportation service that covers this corridor ei:It"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "incurs a monetary cost ce"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": " a lead time le"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": " emissions me"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": " and is"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "subject to the capacity constraint qe"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "iof this edge in t. Each vertex"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "with index j∈Mis also associated with a weight vector"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "wv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "jðcv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "j",
+  "Column2": "lv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "j",
+  "Column2": "mv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "j",
+  "Column2": "qv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "j",
+  "Column2": "tÞ",
+  "Column3": " which denotes that the operation in this infras-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tructure vjwith capacity qv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "jin period tcosts cv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i",
+  "Column2": " emissions mv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "j"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and requires lead time lv"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "i. Note that weights will most likely be"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "dynamic in a real-world situation changing upon a number offactors such as load",
+  "Column2": " personnel and asset availability",
+  "Column3": " andmacroeconomics."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "A single PI user wants to ﬁnd a path from stor",
+  "Column2": " subject to"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "constraints in various logistics metrics. Again note that all theweights are dynamic and change in real-time."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Analysis and heuristic"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The PI should be able to solve the optimality problem at an indi-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "vidual user level",
+  "Column2": " and then consolidate the knowledge from allindividual problems to manage the overall network status.Depending on the requirements of the PI users",
+  "Column3": " the PI is sup-posed to solve different logistics problems and",
+  "Column4": " therefore",
+  "Column5": " themodel could have various objective functions. For example",
+  "Column6": " if aPI user only has a single objective",
+  "Column7": " for example",
+  "Column8": " minimizing thetotal shipping time from s to r",
+  "Column9": " then the PI model is equivalentto the classical single-source shortest path problem (SSSP)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Nevertheless",
+  "Column2": " the PI might change in time and variations of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the SSSP are needed. In the simplest case",
+  "Column2": " with constant network"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and shipping time",
+  "Column2": " the SSSP is static and can be easily solved"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "using the classical Dijkstra ’s algorithm (Dijkstra 1959). If the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "network changes over time (e.g.",
+  "Column2": " a pathway is blocked due to anaccident)",
+  "Column3": " the SSSP is dynamic and needs combinatorial proper-ties to obtain ef ﬁcient results (e.g.",
+  "Column4": " Demetrescu and ItalianoA stylized model for the Physical Internet 72006). If the shipping time changes over time but is still pre-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "known (e.g.",
+  "Column2": " it costs twice the time in the rush hour)",
+  "Column3": " the SSCPis time-dependent and can be solved using label-correcting algo-rithms (e.g.",
+  "Column4": " Dean 2004). If the shipping time is completely ran-dom",
+  "Column5": " the SSCP is stochastic and the objective is to minimize theexpected total time (e.g.",
+  "Column6": " Miller-Hooks and Mahmassani 2000)."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "In reality",
+  "Column2": " PI users might have various requirements that sig-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "niﬁcantly complicate the solution processes. For example",
+  "Column2": " a PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "user might want to jointly optimize time",
+  "Column2": " cost",
+  "Column3": " and emissions.This will extend the model to a multi-objective",
+  "Column4": " time-dependent"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "shortest path problem. A PI user could also set one logistics met-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ric as a hard constraint and optimize another",
+  "Column2": " for example",
+  "Column3": " toship a parcel at the lowest cost within seven days. The modelwill then be extended to a capacitated time-dependent shortestpath problem. Since different PI users might have different pref-erences over the logistics metrics",
+  "Column4": " the PI needs to design tailoredalgorithms to meet them."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Even the objective function can be time-dependent. For exam-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ple",
+  "Column2": " due to a change in the network topology",
+  "Column3": " the shipment mightbecome stuck midway through its transport and cannot be deliv-ered on time. The shipper could then be required to make an"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "interim decision such as cost minimization instead of time mini-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "mization or could simply request the return of the shipment. Thisrequires the PI to offer real-time tracking and tracing along withﬂexible routing adjustments in the shipment processes."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The relatively “simple ”variation of the SSSP is not an easy"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problem to solve. To solve the different extensions concerningtheﬁve logistics metrics of the PI problem to optimality",
+  "Column2": " the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "most sophisticated of these current algorithms would be over-whelmed by the size and complexity of the PI problem itself.Novel heuristics that are developed based on the distinct featuresof the PI are needed."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Inspired by the “reachability ”as well as “optimality ”features"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "of the PI",
+  "Column2": " we propose a simple iterative two-stage solutionheuristic as an example of how one might approach the dif ﬁcult"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problem of ﬁnding optimal solutions to shipments over the PI. In"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "theﬁrst stage",
+  "Column2": " the reachability problem is solved: Given the cur-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "rent graph",
+  "Column2": " ﬁnd all walks from the current vertex v"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "jto the receiv-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ing vertex r.Awalk between two vertices denotes a sequence of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "directed edges from the initial vertex to the ﬁnal vertex. In the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "second stage",
+  "Column2": " the optimality problem is solved: From all thevalid walks",
+  "Column3": " select the one that satis ﬁes the user ’s metric require-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ments. Whenever the part of the PI involved in the predecidedsolution is changed",
+  "Column2": " the topology of the graph will be accord-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ingly updated and the above two-stage optimization problemrecalculated",
+  "Column2": " this process continues until the physical objectﬁnally reaches the receiver. The ﬂow chart of the algorithm is"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "shown in Figure 4."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The key to our algorithm is splitting a complex problem (the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "PI model) into two sub-problems (the reachability and optimalityproblems). Managerially speaking",
+  "Column2": " these are two different prob-lems embedded in the PI and can be decoupled",
+  "Column3": " and our heuristicnaturally mimics the practical operation of the PI. Technically"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "speaking",
+  "Column2": " our approach facilitates the solution of a more complex"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problem via a sequential and iterative process of solving twosimpler sub-problems",
+  "Column2": " which reduces the entire computing effort.In reality",
+  "Column3": " the feasible set of the reachability problem might bestable because similar problems have been solved by the PI anda large proportion of the solutions are prestored. For example",
+  "Column4": " ifa shipment will be delivered from Shanghai to Berlin",
+  "Column5": " it is mostprobable that the ocean vessel terminal of Hamburg will beincluded in one of the reachable walks and this solution has beenseen in other problems multiple times before."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The PI as a dynamic traf ﬁc assignment problem"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The aforementioned model re ﬂects the routing of a single ship-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ment without considering the status of the entire PI network.Given the capacity of the PI",
+  "Column2": " when multiple users are simultane-ously using the PI",
+  "Column3": " congestions might happen and eventuallyimpact every shipment in the entire PI network. Knowledge con-cerning all PI users then needs to be consolidated to predict andmanage the aggregated status of the PI network. This problemfalls into the scope of the classical dynamic traf ﬁc assignment"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problem in the transportation literature."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "A popular heuristics for this kind of problem is to iterate the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "network until equilibrium (if found) is achieved (Figure 5). In"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the beginning",
+  "Column2": " the logistics metrics of the network are obtained"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "and each shipment solves its extended shortest path problem.The joint decisions of all shipments will change the traf ﬁcﬂows"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in the PI network",
+  "Column2": " which results in a set of new logistics metrics.Each shipment then needs to solve its extended shortest pathproblems again. The iterative process then converges to an equi-librium solution for the shipments",
+  "Column3": " and the solution of theextended shortest path problem can be obtained using our algo-rithm shown in Figure 4.Figure 3: A stylized network model for the Physical Internet.8 C. Dong and R. FranklinIt should be noted that Figure 5 is only an initial framework"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "demonstrating the feasibility of using the DTA literature to sup-port the implementation and theory-building of the PI. In thisframework",
+  "Column2": " the characteristics of the PI and the principles of theDTA models can be linked. For example",
+  "Column3": " the reachability prob-lem can be represented by route enumeration of the network",
+  "Column4": " theprocess of identifying a set of alternative routes using SP analy-sis (Bovy and Fiorenzo-Catalano 2007)",
+  "Column5": " and the optimality prob-lem can be tackled by various forms of network assignment"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "such as generalized cost (weighted sum of cost and time) mini-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "mization. The shipment of a package in the PI under speci ﬁc"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "requirements from the PI user aligns with the “travel choice prin-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ciple ”of the DTA",
+  "Column2": " and the smooth operations of the PI re ﬂect"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the existence of equilibriums in the DTA. Our simple heuristiccan and should be enriched in various ways in future research.However",
+  "Column2": " once again",
+  "Column3": " it is not the focus of this paper for thoseextensions."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The PI network will be the largest logistics network ever stud-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ied and its related DTA model will be of a huge size. Previousalgorithms of the DTA will certainly need to be updated. The PI"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "network is also large in terms of the stakeholder involved",
+  "Column2": " who"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "may have different objectives. For example",
+  "Column2": " one user may want"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the cheapest service while the other the fastest delivery",
+  "Column2": " and thePI operators need to quote different offers given the current net-work status."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "One typical question addressed in DTA network analyses is"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the choice between Wardrop ’s two network equilibria: the system"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "equilibrium and the user equilibrium. Because of the size of thePI",
+  "Column2": " it is dif ﬁcult to imagine a single super-agent that optimizes"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the sum of costs over all users. It is more likely that user equilib-rium will prevail: Each single shipment will be optimized indi-vidually. However",
+  "Column2": " a logistics service provider may consolidate"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "freight from several shipments and minimize the sum of total"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "costs. System equilibria therefore exist in such sub-problems."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Reﬂection of the PI characteristics in the model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Montreuil (2011) has highlighted 13 characteristics of the PI that"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "achieve the global logistics sustainability vision. Our currentmodel",
+  "Column2": " together with its potential extensions",
+  "Column3": " covers these charac-teristics as illustrated in Table 3. Using graph theory",
+  "Column4": " a rich liter-ature exists to support innovations in the conceptualization andoperationalization of the PI using the proposed model as an ini-tial starting point."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Model extension"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The current model illustrates the optimality problem of the PI in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the aspects of cost",
+  "Column2": " schedule",
+  "Column3": " and emissions. Statistically speak-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ing",
+  "Column2": " only the ﬁrst moments of these parameters are evaluated. It"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "could be interesting to measure the second moments of theseobjectives. The second moment of the lead time is its punctualityand the second moments of cost and emissions could also be achanging number depending on",
+  "Column2": " for example",
+  "Column3": " the shipment vol-umes or equipment type. It may be necessary to consider boththeﬁrst and second moments together. For example",
+  "Column4": " sometimes"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "a shipper might want to choose a more punctual transportationservice",
+  "Column2": " even if that requires a longer",
+  "Column3": " but more reliable leadtime."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The PI could also consider other objectives besides cost",
+  "Column2": " lead"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "time",
+  "Column2": " and emissions. A typical example would be modal usage.Each vertex and edge of the graph in Figure 3 could then beFigure 4: The Physical Internet as an extended shortest path"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problem",
+  "Column2": " and the ﬂow chart of the solution algorithm."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Find the logis\/g415cs "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "metrics of the "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "networkSolve the extended "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "shortest path "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "problems"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Adjust route "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "choices toward "
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "equilibriumFigure 5: The dynamic traf ﬁc assignment problem can be"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "solved using iterations.A stylized model for the Physical Internet 9associated with an additional weight",
+  "Column2": " representing the mode"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "employed for the shipment. An objective function maximizingrail usage",
+  "Column2": " for example",
+  "Column3": " similar to Equations (1) and (2)",
+  "Column4": " wouldthen be added to the model."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Additional practical constraints could be incorporated into the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "model. For example",
+  "Column2": " a warehouse may have speci ﬁc in-bound"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "delivery time windows",
+  "Column2": " the standardized packages have differentsizes instead of one",
+  "Column3": " and the shipper might want reverse logisticsservices in the PI. These constraints could also be dynamic. Forexample",
+  "Column4": " if the present optimality problem does not give feasiblesolutions",
+  "Column5": " the shipper (or any other responsible person) is noti-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ﬁed",
+  "Column2": " who can decide whether to quit the PI",
+  "Column3": " or accept the new"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cost\/services conditions."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "SUMMARY"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "The main contribution of this paper is the proposal of a feasible"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Physical Internet (PI) model-based conceptual framework thatsupports its implementation. The model is a stylized representa-tion of the PI network",
+  "Column2": " and bridges the current gap between thehigh-level PI concept and its expected bene ﬁts. We ﬁrst compare"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the Physical Internet with its conceptual metaphor",
+  "Column2": " the DigitalInternet",
+  "Column3": " and identify the reachability and optimality problems ina network. On the basis of this knowledge",
+  "Column4": " we use a graph to"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "model the PI",
+  "Column2": " discuss the link to the classical transportation theo-ries",
+  "Column3": " and propose a simple algorithm as a heuristic solution."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Since the PI is a complex concept that potentially covers all"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "aspects of future transportation problems",
+  "Column2": " our stylized modelobviously needs extensions. For example",
+  "Column3": " for the cargo that can-not be packed into standardized boxes",
+  "Column4": " the graph will be chan-ged. When a natural disaster happens",
+  "Column5": " infrastructures aredamaged and governments might interfere",
+  "Column6": " and special modesmight be needed for such special cases. In addition",
+  "Column7": " our modelfocuses only on transportation issues",
+  "Column8": " not others such as inven-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tory management in the network. Future research could combine"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "both transportation and inventory decisions in the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "More characteristics of the PI could be incorporated into the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "model. For example",
+  "Column2": " the cost and time could depend on moreparameters such as the shipment size",
+  "Column3": " node throughput times",
+  "Column4": " arcconstraints such as capacities",
+  "Column5": " speed limits",
+  "Column6": " carrier limitations",
+  "Column7": "etc. Transportation models that deal with generalized travel util-ity incorporating all performance-relevant metrics can be used insuch kind of PI optimizations. Multiple cargos could be sent intothe PI and corresponding collaboration and joint replenishmentopportunities could be studied. A possible use of the PI would"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "be to distribute and store inventory that does not yet have a ﬁnal"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "destination. In this case",
+  "Column2": " cargo would be pushed into the PI",
+  "Column3": "Table 3: The main characteristics of the PI mentioned in Montreuil (2011) can be incorporated in our model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Characteristics of the PI (Montreuil 2011) Covering of the characteristics in our PI model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Encapsulate merchandises in world-standard smart green"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "modular containersA packing station is modeled as a vertex in the graph."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Aiming toward universal interconnectivity Interconnectivity is modeled as edges connecting vertices in the graph."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Evolve from material to pi-container handling and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "storage systemAny material into the PI (vertex s) must ﬁrst travel to a packing station"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "(solid vertex) and then ﬂow in the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Exploit smart networked containers embedding smart"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "objectsThe current weights of the edges\/verities of the graph can be extended"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "representing additional information linked to the smart objects\/containers"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Evolve from point-to-point hub-and-spoke transport to"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "distributed multi-segment intermodal transportOur graph is not hub-and-spoke. Instead",
+  "Column2": " it represents a general distributed"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "network with dynamic changes in topology."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Embrace a uni ﬁed multi-tier conceptual framework The vertices and edges between s and r are general settings and can"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "represent any more speci ﬁc multi-tier networks. Nodes are purposely left"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "simple",
+  "Column2": " but could be modeled in a hierarchical manner in which PIprotocols operate similar to the sub-net operations that occur in the DI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Activate and exploit an Open Global Supply Web The graph can represent any kind of global supply web."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Design products ﬁtting containers with minimal space"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "wasteThis is more from the production side and is not included in our PI model"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Minimize physical moves and storages by digitally"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "transmitting knowledge and materializing objects aslocally as possibleAn additional weight of the edges and vertices representing the physical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "moves can be incorporated into the current graph to tackle this point. Thesolution method will be similar to the current lead time minimizationprocess."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Deploy open performance monitoring and capability"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "certiﬁcationsThe real-time update of the topology of the graph is based on real-time"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "performance monitoring of the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Prioritize webbed reliability and resilience of networks Reliability and resilience can be modeled as how often\/how much the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "topology of the graph is changed."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Stimulate business model innovation There is a rich body of graph theory literature to support innovations in the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "current model."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Enable open infrastructural innovation There is a rich body of graph theory literature to support innovations in the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "current infrastructure.10 C. Dong and R. Franklinwhile it is still not clear who would be the ﬁnal receiver and the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "cargo would need to be stored somewhere in the PI (referring toAmazon ´s prepositioning goods for rapid ful ﬁllment). The reach-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ability problem and the sequential optimality problem wouldneed to be updated as to who the ultimate receiver would be."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Many other scenarios can be envisioned that extend the styl-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ized model outlined in this paper. As the PI is a new and emerg-ing research area",
+  "Column2": " it has not been the intention of this paper toexhaustively study the many possible issues that must beaddressed to operationalize the PI concept. However",
+  "Column3": " it is hopedthat this paper helps in establishing the ongoing development of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the PI concept so that the bene ﬁts identi ﬁed thus far from this"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "approach to transport and logistics can ultimately be realized."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Since the purpose of this paper is to understand the features of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the PI and propose a model to support its implementation",
+  "Column2": " adetailed and rigorous mathematical analysis has not been pre-sented. Future research could study the properties and algorithmsof the model",
+  "Column3": " and apply empirical validations to begin laying thefoundation for a more rigorous algorithmic foundation of the PI."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "ACKNOWLEDGEMENTS"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Open access funding enabled and organized by Projekt DEAL."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "REFERENCES"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ahuja",
+  "Column2": " R.K.",
+  "Column3": " Magnanti",
+  "Column4": " T.L.",
+  "Column5": " and Orlink",
+  "Column6": " J.B. 1993. Network"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Flows: Theory",
+  "Column2": " Algorithms",
+  "Column3": " and Applications . New Jersey:"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Prentice Hall."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ambra",
+  "Column2": " T.",
+  "Column3": " Caris",
+  "Column4": " A.",
+  "Column5": " and Macharis",
+  "Column6": " C.. 2019. “Towards Freight"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Transport System Uni ﬁcation: Reviewing and Combining the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Advancements in the Physical Internet and Synchromodal"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Transport Research. ”International Journal of Production"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Research 57(6):1606 –1623."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ballot",
+  "Column2": " E.",
+  "Column3": " Montreuil",
+  "Column4": " B.",
+  "Column5": " and Meller",
+  "Column6": " R.D. 2014. The Physical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Internet –The Network of Logistics Networks . Paris: La"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Documentation Française."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Boston Consulting Group. 2015. “A Hard Road: Why CPG"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Companies Need a Strategic Approach to Transportation ”."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Bovy",
+  "Column2": " P.H.L.",
+  "Column3": " and Fiorenzo-Catalano",
+  "Column4": " S.. 2007. “Stochastic"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Route Choice Set Generation: Behavioral and ProbabilisticFoundations. ”Transportmetrica 3(3):173 –189."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Casey",
+  "Column2": " B.",
+  "Column3": " Bhaskar",
+  "Column4": " A.",
+  "Column5": " Guo",
+  "Column6": " H.",
+  "Column7": " and Chung",
+  "Column8": " E.. 2014. “Critical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Review of Time-Dependent Shortest Path Algorithms: A"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Multimodal Trip Planner Perspective. ”Transport Reviews 34"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "(4):522 –539."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Cerf",
+  "Column2": " V.G.",
+  "Column3": " and Kahn",
+  "Column4": " R.E.. 1974. “A Protocol for Packet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Network Intercommunication. ”IEEE Transactions on"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Communications 22(5):637 –648."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Chen",
+  "Column2": " K.",
+  "Column3": " Xu",
+  "Column4": " G.",
+  "Column5": " Xue",
+  "Column6": " F.",
+  "Column7": " Zhong",
+  "Column8": " R.Y.",
+  "Column9": " Liu",
+  "Column10": " D.",
+  "Column11": " and Lu",
+  "Column12": " W.. 2018."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“A Physical Internet-Enabled Bu ilding Information Modelling"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "System for Prefabricated Construction. ”International Journal of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Computer Integrated Manufacturing 31(4–5):349 –361."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Cimon",
+  "Column2": " Y. 2014. “Implementing the Physical Internet Real-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "World Interface: Beyond Business Models",
+  "Column2": " the Devil Is in the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Details ”.I n First International Physical Internet Conference ."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Quebec City",
+  "Column2": " Canada.Clark",
+  "Column3": " D.. 1988. “The Design Philosophy of the DARPA Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Protocols. ”ACM SIGCOMM Computer Communications"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Review 18(4):106 –114."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Comer",
+  "Column2": " D.E. 2014. Internetworking with TCP\/IP . 6th ed."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Pearson."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Commission",
+  "Column2": " European. 2016. “Modular Logistics Units in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Shared Co-Modal Networks. ”. https:\/\/cordis.europa.eu\/project\/"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "rcn\/105754_en.html ."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Dean",
+  "Column2": " B. 2004. “Shortest Paths in FIFO Time-Dependent"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Networks: Theory and Algorithms. ”Rapport Technique ."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Demetrescu",
+  "Column2": " C.",
+  "Column3": " and Italiano",
+  "Column4": " G.F.. 2006. “Dynamic Shortest"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Paths and Transitive Closure: Algorithmic Techniques and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Data Structures. ”Journal of Discrete Algorithms",
+  "Column2": " Special"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "issue in honour of Giorgio Ausiello 4(3):353 –383."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Dijkstra",
+  "Column2": " E.W.. 1959. “A Note on Two Problems in Connexion"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "with Graphs. ”Numerische Mathematik 1:269 –271."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Duque",
+  "Column2": " D.",
+  "Column3": " Lozano",
+  "Column4": " L.",
+  "Column5": " and Medaglia",
+  "Column6": " A.L.. 2015. “An Exact"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Method for the Biobjective Shortest Path Problem for Large-Scale Road Networks. ”European Journal of Operational"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Research 242(3):788 –797."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ennis",
+  "Column2": " G.. 1983. “Development of the DoD Protocol Reference"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Model. ”",
+  "Column2": "6 –7. Proceedings of the Symposium on"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Communications Architectures & Protocols"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "EUROSTAT. 2015. “Greenhouse Gas Emission Statistics. http:\/\/"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ec.Europa.Eu\/Eurostat\/Statistics-Explained\/Index.Php\/Greenhouse_gas_emission_statistics. Accessed on 14December",
+  "Column2": " 2016 ”."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Farrel",
+  "Column2": " A. ed. 2020. \"Overview and Principles of Internet Traf ﬁc"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Engineering. \"TEAS Working Group. Draft RFC3272 v7."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "IETF Trust."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Hofman",
+  "Column2": " W.",
+  "Column3": " Spek",
+  "Column4": " J.",
+  "Column5": " and Brewster",
+  "Column6": " C.. 2017. “Applying"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Blockchain Technology for Hyperconnected Logistics. ”In"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Fourth International Physical Internet Conference"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Hoogendoorn",
+  "Column2": " S.P.",
+  "Column3": " and Bovy",
+  "Column4": " P.H.L.. 2001.",
+  "Column5": " vol. 215",
+  "Column6": " 283 –303."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Proceedings of the Institution of Mechanical Engineers",
+  "Column2": " Part I"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Ji",
+  "Column2": " S.",
+  "Column3": " Peng",
+  "Column4": " X.",
+  "Column5": " and Luo",
+  "Column6": " R.. 2019."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“An Integrated Model for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the Production-Inventory-Distribution Problem in the PhysicalInternet. ”International Journal of Production Research 57"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "(4):1000 –1017."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Kurose",
+  "Column2": " J.",
+  "Column3": " and Ross",
+  "Column4": " K. 2016. Computer Networking: A Top-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Down Approach . 7th ed. New Jersey: Pearson."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Leiner",
+  "Column2": " B.M.",
+  "Column3": " Cerf",
+  "Column4": " V.G.",
+  "Column5": " Clark",
+  "Column6": " D.D.",
+  "Column7": " Kahn",
+  "Column8": " R.E.",
+  "Column9": " Kleinrock"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "L.",
+  "Column2": " Lynch",
+  "Column3": " D.C.",
+  "Column4": " Postel",
+  "Column5": " J.",
+  "Column6": " Roberts",
+  "Column7": " L.G.",
+  "Column8": " and Wolff",
+  "Column9": " S..2009. “A Brief History of the Internet. ”ACM SIGCOMM"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Computer Communication Review 39(5):10."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Licklider",
+  "Column2": " J.C.R.",
+  "Column3": " and Clark",
+  "Column4": " W.E. 1962. “On-Line Man-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Computer Communication ”.I n Proceedings of the May 1 –3"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": 1962,
+  "Column2": " Spring Joint Computer Conference on –AIEE-IRE ’62"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "(Spring)",
+  "Column2": " 113 . San Francisco",
+  "Column3": " California: ACM Press."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "http:\/\/portal.acm.org\/citation.cfm?doid =1460833.1460847."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Lin",
+  "Column2": " Y.-H.",
+  "Column3": " Meller",
+  "Column4": " R.D.",
+  "Column5": " Ellis",
+  "Column6": " K.P.",
+  "Column7": " Thomas",
+  "Column8": " L.M.",
+  "Column9": " and Lombardi"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "B.J.. 2014. “A Decomposition-Based Approach for the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Selection of Standardiz ed Modular Containers. ”International"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Journal of Production Research 52(15):4660 –4672."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Lozano",
+  "Column2": " L.",
+  "Column3": " and Medaglia",
+  "Column4": " A.L.. 2013. “On an Exact Method for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the Constrained Shortest Path Problem. ”Computers &"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Operations Research 40(1):378 –384."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Madkour",
+  "Column2": " A.",
+  "Column3": " Aref",
+  "Column4": " W.G.",
+  "Column5": " Rehman",
+  "Column6": " F.U.",
+  "Column7": " Rahman",
+  "Column8": " M.A.",
+  "Column9": " and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Basalamah",
+  "Column2": " S.. 2017. “A Survey of Shortest-PathA stylized model for the Physical Internet 11Algorithms. ”ArXiv:1705.02044 [Cs]",
+  "Column3": " May .http:\/\/arxiv.org\/"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "abs\/1705.02044. http:\/\/arxiv.org\/abs\/1705.02044.."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Maibach",
+  "Column2": " H.",
+  "Column3": " Schreyer",
+  "Column4": " C.",
+  "Column5": " Sutter",
+  "Column6": " D.",
+  "Column7": " van Essen",
+  "Column8": " H.P.",
+  "Column9": " Boon"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "B.H.",
+  "Column2": " Smokers",
+  "Column3": " R.",
+  "Column4": " Schroten",
+  "Column5": " A.",
+  "Column6": " Doll",
+  "Column7": " C.",
+  "Column8": " Pawlowska",
+  "Column9": " B.",
+  "Column10": "and Bak",
+  "Column11": " M.2007. “Handbook on Estimation of External"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Costs in the Transport Sector",
+  "Column2": " Report Produced within theProject Internalisation Measures for All External Costs ofTransport (IMPACT) ”."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Markillie",
+  "Column2": " P.. 2006. “The Physical Internet. ”The Economist ."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Merchant",
+  "Column2": " D.K.",
+  "Column3": " and Nemhauser",
+  "Column4": " G.L. 1978. “A Model and an"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Algorithm for the Dynamic Traf ﬁc Assignment Problems. ”"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Transportation Science 12(3):183 –199."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Mervis",
+  "Column2": " J.. 2014. “The Information Highway Gets Physical: The"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Physical Internet Would Move Goods the Way Its NamesakeMoves Data \".”Science 344(6188):1104 –1107."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Miller-Hooks",
+  "Column2": " E.D.",
+  "Column3": " and Mahmassani",
+  "Column4": " H.S.. 2000. “Least Expected"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Time Paths in Stochastic",
+  "Column2": " Time-Varying TransportationNetworks. ”Transportation Science 34(2):198 –215."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Mohamed",
+  "Column2": " I.",
+  "Column3": " Klibi",
+  "Column4": " W.",
+  "Column5": " Labarthe",
+  "Column6": " O.",
+  "Column7": " Deschamps",
+  "Column8": " J.-C.",
+  "Column9": " and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Babai",
+  "Column2": " M.Z.. 2017. “Modelling and Solution Approaches for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "the Interconnected City Logistics. ”International Journal of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Production Research 55(9):2664 –2684."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Montreuil",
+  "Column2": " B.. 2011. “Toward a Physical Internet: Meeting the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Global Logistics Sustainability Grand Challenge. ”Logistics"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Research 3(2–3):71 –87."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Montreuil",
+  "Column2": " B.",
+  "Column3": " Ballot",
+  "Column4": " E.",
+  "Column5": " and Fontane",
+  "Column6": " F. 2012. “An Open"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Logistics Interconnection Model for the Physical Internet ”. In."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Bucharest",
+  "Column2": " Romania: Proceedings of the 14th IFACSymposium on Information Control Problems inManufacturing ."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Montreuil",
+  "Column2": " B.",
+  "Column3": " Meller",
+  "Column4": " R.D.",
+  "Column5": " and Ballot",
+  "Column6": " E. 2013. “Physical Internet"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Foundations ”.I n Service Orientation in Holonic and Multi-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Agent Manufacturing and Robotics ",
+  "Column2": " edited by T. Borangiu",
+  "Column3": " A."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Thomas",
+  "Column2": " and D. Trentesaux",
+  "Column3": " 151 –166. Berlin: Springer."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Pan",
+  "Column2": " S.",
+  "Column3": " Ballot",
+  "Column4": " E.",
+  "Column5": " Huang",
+  "Column6": " G.Q.",
+  "Column7": " and Montreuil",
+  "Column8": " B.. 2017."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“Physical Internet and Interconnected Logistics Services:"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Research and Applications. ”International Journal of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Production Research 55(9):2603 –"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": 2609
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Pan",
+  "Column2": " S.",
+  "Column3": " Nigrelli",
+  "Column4": " M.",
+  "Column5": " Ballot",
+  "Column6": " E.",
+  "Column7": " Sarraj",
+  "Column8": " R.",
+  "Column9": " and Yang",
+  "Column10": " Y.. 2015."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“Perspectives of Inventory Control Models in the Physical"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Internet: A Simulation Study. ”Computers & Industrial"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Engineering 84(June):122 –132."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Pardalos",
+  "Column2": " P.M.",
+  "Column3": " Du",
+  "Column4": " D.-Z.",
+  "Column5": " and Graham",
+  "Column6": " R.L. eds. 2005."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Handbook of Combinatorial Optimization . Second Edi. New"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "York: Springer."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Peeta",
+  "Column2": " S.",
+  "Column3": " and Ziliaskopoulos",
+  "Column4": " A.K.. 2001. “Foundations of"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Dynamic Traf ﬁc Assignment: The Past",
+  "Column2": " the Present and the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Future. ”Networks and Spatial Economics 1:233 –265."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Petersen",
+  "Column2": " L.L.",
+  "Column3": " and Davie",
+  "Column4": " B.S. 2011. Computer Networks: A"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Systems Approach . 5th ed. Elsevier."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Postel",
+  "Column2": " J.1981. Internet Protocol DARPA Internet Program"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Protocol Speci ﬁcation."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Rakha",
+  "Column2": " H.",
+  "Column3": " and Taw ﬁk",
+  "Column4": " A. 2009. “Trafﬁc Networks: Dynamic"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Trafﬁc Routing",
+  "Column2": " Assignment",
+  "Column3": " and Assessment ”.I n"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Encyclopedia of Complexity and Systems Science ",
+  "Column2": " edited by"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Robert A. Meyers",
+  "Column2": " 9429 –9470. New York",
+  "Column3": " NY: Springer"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "New York. doi: 10.1007\/978-0-387-30440-3_562."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Sarraj",
+  "Column2": " R.",
+  "Column3": " Ballot",
+  "Column4": " E.",
+  "Column5": " Pan",
+  "Column6": " S.",
+  "Column7": " Hakimi",
+  "Column8": " D.",
+  "Column9": " and Montreuil",
+  "Column10": " B.."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "2014. “Interconnected Logistic Networks and Protocols:Simulation-Based Ef ﬁciency Assessment. ”International"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Journal of Production Research 52(11):3185 –3208."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Sarraj",
+  "Column2": " R.",
+  "Column3": " Ballot",
+  "Column4": " E.",
+  "Column5": " Pan",
+  "Column6": " S.",
+  "Column7": " and Montreuil",
+  "Column8": " B.. 2012."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“Analogies between Internet Network and Logistics Service"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Networks: Challenges Involved in the Interconnection. ”"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Journal of Intelligent Manufacturing 25(6):1207 –1219."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Shi",
+  "Column2": " N.",
+  "Column3": " Zhou",
+  "Column4": " S.",
+  "Column5": " Wang",
+  "Column6": " F.",
+  "Column7": " Tao",
+  "Column8": " Y.",
+  "Column9": " and Liu",
+  "Column10": " L.. 2017. “The Multi-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Criteria Constrained Shortest Path Problem. ”Transportation"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Research Part E: Logistic s and Transportation Review 101:13 –29."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Sternberg",
+  "Column2": " H.",
+  "Column3": " and Norrman",
+  "Column4": " A. 2017. “The Physical Internet –"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Review",
+  "Column2": " Analysis and Future Research Agenda. ”International"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Journal of Physical Distribution & Logistics Management2"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "47(8):736 –762."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Sun",
+  "Column2": " Y.",
+  "Column3": " Zhang",
+  "Column4": " C.",
+  "Column5": " Dong",
+  "Column6": " K.",
+  "Column7": " and Lang",
+  "Column8": " M.. 2018. “Multiagent"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Modelling and Simulation of a Physical Internet Enabled"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Rail-Road Intermodal Transport System. ”Urban Rail Transit"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "4(3):141 –154."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Szeto",
+  "Column2": " W.",
+  "Column3": " and Wong",
+  "Column4": " S.. 2012. “Dynamic Traf ﬁc Assignment:"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Model Classi ﬁcations and Recent Advances in Travel Choice"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Principles. ”Open Engineering 2(1):1 –18."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Treiblmaier",
+  "Column2": " H.",
+  "Column3": " Mirkovski",
+  "Column4": " K.",
+  "Column5": " and Lowry",
+  "Column6": " P.B.. 2016."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“Conceptualizing the Physical Internet: Literature Review"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Implications and Directions for Future Research. ”Available"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "at SSRN . Https:\/\/Ssrn.Com\/Abstract =2861409."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Walha",
+  "Column2": " F.",
+  "Column3": " Bekrar",
+  "Column4": " A.",
+  "Column5": " Chaabane",
+  "Column6": " S.",
+  "Column7": " and Loukil",
+  "Column8": " T.M.. 2016. “A"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Rail-Road PI-Hub Allocation Problem: Active and ReactiveApproaches. ”Computers in Industry 81(September):138 –151."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Wang",
+  "Column2": " Y.",
+  "Column3": " Szeto",
+  "Column4": " W.Y.",
+  "Column5": " Han",
+  "Column6": " K.",
+  "Column7": " and Friesz",
+  "Column8": " T.L.. 2018."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "“Dynamic Traf ﬁc Assignment: A Review of the"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Methodological Advances for Environmentally SustainableRoad Transportation Applications. ”Transportation Research"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Part B: Methodological 111(May):370 –394."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Yao",
+  "Column2": " J.. 2017. “Optimisation of One-Stop Delivery Scheduling in"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Online Shopping Based on the Physical Internet. ”"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "International Journal of Production Research 55(2):358 –376."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Zhu",
+  "Column2": " X.",
+  "Column3": " and Wilhelm",
+  "Column4": " W.E. 2007. “Three-Stage Approaches for"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Optimizing Some Variations of the Resource ConstrainedShortest-Path Sub-Problem in a Column Generation Context. ”"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "European Journal of Operational Research 183(2):564 –577."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "SHORT BIOGRAPHIES"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Chuanwen Dong is Assistant professor for Technology and"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Operations Management at ESCP Business School",
+  "Column2": " Berlin cam-pus. He holds a Master of Engineering",
+  "Column3": " a Master of Economics",
+  "Column4": "and a Doctor of Business Economics. He has expertise in a widerange of quantitative operations models",
+  "Column5": " with particular interest"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "in sustainable supply chain management."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Rod Franklin is Adjunct Professor of Logistics and Academic"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "Director of Executive Education at K ¨uhne Logistics University."
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "He received his Doctorate in Management from Case WesternReserve University in Cleveland",
+  "Column2": " and has held management posi-"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "tions at K ¨uhne +Nagel",
+  "Column2": " USCO Logistics",
+  "Column3": " etc. His research"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "focuses on the application of modern management techniques tothe ef ﬁcient and effective operation of supply chains",
+  "Column2": " sustainable"
+ },
+ {
+  " From the Digital Internet to the Physical Internet: A Conceptual": "business models",
+  "Column2": " corporate social responsibility and cloud basedsupply chain management12 C. Dong and R. Franklin"
+ }
+]
