@@ -1,0 +1,751 @@
+ From the Digital Internet to the Physical Internet: A Conceptual
+Framework With a Stylized Network Model
+Chuanwen Dong1and Rod Franklin2
+1ESCP Business School
+2Kuehne Logistics University
+Despite the increasing academic interest and ﬁnancial support for the Physical Internet (PI), surprisingly little is known about its opera-
+tionalization and implementation. In this paper, we suggest studying the PI on the basis of the Digital Internet (DI), which is a well-estab-
+lished entity. We propose a conceptual framework for the PI network using the DI as a starting point, and ﬁnd that the PI network not only
+needs to solve the reachability problem, that is, how to route an item from A to B, but also must confront a more complicated optimality prob-
+lem, that is, how to dynamically optimize a set of additional logistics-related metrics such as cost, emissions and time for a shipment. These last
+issues are less critical for the DI and handled using relatively simpler procedures. Based on our conceptual framework, we then propose a sim-
+ple network model using graph theory to support the operationalization of the PI. The model covers the characteristics of the PI raised in the
+current literature and suggests future directions for further quantitative analyses.
+Keywords : physical internet; digital internet; conceptual framework; model; operationalization
+INTRODUCTION
+There are a growing number of concerns about current logistics
+and transportation systems. From an economic perspective, trans-
+portation costs are steadily rising, which erodes the bene ﬁts of
+all other supply chain cost-saving efforts (Boston Consulting
+Group 2015). From a social perspective, the over-utilized road
+network brings substantial “stress ”to our society regarding acci-
+dents, noise, air pollution, etc. (Maibach et al., 2007). From an
+environmental perspective, whereas all other industry sectors are
+steadily reducing greenhouse gas emissions, the transportation
+sector is, unfortunately, increasing these emissions (EUROSTAT
+2015).
+Clearly, the business-as-usual logistics industry is not sustain-
+able and disruptive innovations are urgently needed. The Physi-
+cal Internet (PI), originally described by Montreuil (2011), is
+regarded as such a paradigm-breaking concept to tackle the “lo-
+gistics sustainability grand challenge ”. Ballot et al. (2014) and
+Mervis (2014), have further elaborated the concept of the PI.
+They use the Digital Internet (DI), which is a well-established
+artifact and widely-accepted service technology, to illustrate its
+potential as a design metaphor for the PI. The classical analogy
+is, whereas the Digital Internet transfers digital data in packets
+smoothly among users, the Physical Internet moves physical
+objects seamlessly through an open and interconnected logistics
+network.
+Despite its highlighted advantages, the PI has received serious
+criticisms. Recent research by Sternberg and Norrman (2017),
+among others, has challenged the PI by questioning a lack of
+developed business models that can illustrate how to move from
+the concept to its adoption. Their thoughts coincide with, forexample, Cimon (2014) and Pan et al. (2017), that the implemen-
+tation of the PI remains a challenge. Treiblmaier et al. (2016)
+point out that PI speci ﬁc theories focusing on the advancement
+of the PI concept are also lacking. So far, the research on the PI
+has primarily focused on its conceptual development and the pro-
+mised effect thereof. Knowledge on the operationalization of the
+PI remains limited.
+Several studies have started to exploit PI operationalization,
+in topics such as protocol building (Montreuil et al., 2012), PI
+routing optimization (Sarraj et al. 2014), and modular container
+selection (Lin et al. 2014). The motivation of this paper is not
+to solve a speci ﬁc PI problem. Instead, we investigate from a
+more fundamental perspective: What are the unique features of
+the PI, and how should these features be integrated into rigor-
+ous theories to support the PI ’s implementation. By answering
+this question, we wish to obtain a more generalized understand-
+ing of the PI that can be used as a starting point for future PI
+research.
+Motivated by this objective, our aim is to begin ﬁlling in
+this research gap by introducing a conceptual framework for
+modeling ﬂows within the PI, as well as a highly stylized
+model based on analogies to the Digital Internet. We begin by
+investigating the conceptual origin of the PI, its analogical rela-
+tionship to the DI, and establish our framework based on this
+analogy. There are two reasons for this initiative: (1) Since the
+DI is a metaphor for the PI, there must exist similarities
+between the two, from their namesake to models and imple-
+mentations; and (2) the DI is a well-established artifact with
+well-known features and an extensive literature body on its
+operations. The history of the development of the DI, how it
+has come to be governed, the challenges it has faced in scaling,
+security, privacy and trust, its operation through a layered pro-
+tocol approach, and many other aspects of its growth provide a
+starting point for considering similar issues with respect to the
+PI. However, since both the DI and the PI are extremelyCorresponding author:
+Chuanwen Dong, Heubnerweg 8-10, 14059 Berlin, Germany;
+E-mail :cdong@escp.eu.Journal of Business Logistics , 2020, 1 –12 doi: 10.1111/jbl.12253
+© 2020 The Authors. Journal of Business Logistics published by Wiley Periodicals LLC
+on behalf of Council of Supply Chain Management Professionals
+This is an open access article under the terms of the Creative Commons Attribution License, which permits use, distribution and reproduction in
+any medium, provided the original work is properly cited.
+complex systems, it is beyond the scope of this paper to create
+a comprehensive “one-to-one ”comparison between them or to
+solve all the PI “problems. ”Instead, the purpose of this paper
+is to support the PI theory building process and the practicalimplementation of the PI. Given this purpose, this paper aimsto answer the following two research questions:
+1 What are the primary similarities and differences between the
+DI and the PI?
+2 What might be a simple, but useful model that supports
+research into, as well as, the implementation of the PI?
+By examining these two questions, we conduct a comparison
+between the DI and the PI, and take the lessons learned from this
+comparison to propose a stylized model of the PI. Though themodel is simple, it captures the distinct characteristics of the PImentioned in Montreuil (2011) and employs approaches fromclassical transportation theories (such as shortest path anddynamic traf ﬁc assignment) to study the PI.
+The rest of the paper is organized as follows. In Section 2,
+we review the related literature, and in Section 3, we reportthe structure of the Digital Internet. In Section 4, we discusswhy ﬂow optimization in the Physical Internet involves differ-
+ent complexities than those found in the Digital Internet. On
+the basis of this discussion, we propose a stylized network
+model of the Physical Internet and suggest a heuristic solutionin Section 5. Finally, we discuss future research avenues inSection 6.
+LITERATURE REVIEW
+Our work is closely related to three streams of literature: the
+classical computer network literature of the Digital Internet, theemerging Physical Internet literature, and the classical transporta-tion engineering literature.
+The digital internet
+The DI is arguably the largest system ever created by mankind,
+with billions of connected devices, including computers, phones,
+or any equipment with a sensor (Kurose and Ross 2016). The
+early concept of the DI dates back to Licklider and Clark (1962),who envisioned a group of globally interconnected computers fordata transmission. Over the years, the DI has revolutionizedworldwide data communications (Leiner et al. 2009). Speci ﬁ-
+cally, a reliable data delivery is secured by the so-called Trans-mission Control Protocol/Internet Protocol (TCP/IP) originatedby Cerf and Kahn (1974). New protocols, such as multi-protocollabel switching (MPLS), are being used as intermediate routingprotocols to facilitate traf ﬁc engineering services that are dif ﬁcult
+or impossible to implement using TCP/IP (Farrel, 2020). These
+protocols allow DI traf ﬁc engineers to shape data and message
+ﬂows to avoid congested paths and speed up traf ﬁcﬂow. Inter-
+ested readers can obtain additional information on the foundationof the DI and digital networking in general through the studiesby Petersen and Davie (2011), Comer (2014), Kurose and Ross(2016), etc.In this paper, we use this stream of literature as the foundation
+for the analogies that inform the concept of the Physical Internetand establish a general foundation for its composition.
+The physical internet
+The PI is proposed as an analogy of the DI for managing the
+ﬂow of physical objects, with the special purpose of increasing
+the ef ﬁciency and sustainability of logistics systems (Montreuil
+2011). Despite being a relatively new concept (the ﬁrst mention
+of the Physical Internet appeared in an article in the June 17,2006 edition of The Economist (Markillie 2006)), it has attractedmuch attention from various stakeholders. The research on the PI
+spreads over various topics in logistics, such as container stan-
+dardization (Lin et al. 2014); delivery schedule optimization(Yao 2017); vehicle routing optimization (Walha et al. 2016);city logistics (Mohamed et al. 2017); intermodal transportation(Sun et al. 2018); synchromodal transportation (Ambra et al.2019); PI-enabled information systems (Chen et al. 2018); coor-dination of production, inventory, and transportation (Ji et al.2019); and vendor-managed inventory management (Pan et al.2015).
+While the aforementioned articles have begun to examine
+many of the facets of what a PI might look like or the challenges
+that such a concept must address, notable criticisms of the idea
+remain. It is still not clear, for example, how the PI can be oper-ationalized (Sternberg and Norrman 2017), and there is a lack ofPI-speci ﬁc theories that advance the knowledge of the current
+logistics literature (Treiblmaier et al. 2016).
+A promising start to support the implementation and theory-
+building concerning the PI is to understand its distinct featureswhen compared to digital networking structures and the DI. Anumber of researchers have followed this logic. Montreuil et al.(2012) propose a seven-layer Open Logistics Interconnectionmodel inspired by the seven-layer ISO Open Systems Intercon-nection model. Sarraj et al. (2012) explore the analogies between
+a Digital Internet network and a logistics service network demon-
+strating the potential for ef ﬁciency improvements by following
+similar practices. More recently, Sarraj et al. (2014) proposenovel transportation protocols for the PI and evaluate their staticperformance via simulation-based optimization.
+Compared to the previous PI literature, we offer a more com-
+prehensive comparison between the DI and the PI and highlightdistinct features that need to be addressed in future PI studies.We then propose and illustrate how to integrate these featuresinto a stylized PI model, which establishes a link to the classicaltransportation theories for future PI research. More speci ﬁcally,
+our proposed model covers a wide variation of the PI problem,
+such as real-time, multi-objective, and network equilibrium,which makes it more realistic than those currently covered in theliterature.
+Classical transportation theories
+Although the context of our model is the PI, its mathematical
+structure is similar to that found in the literature on classicaltransportation problems, whose richness and rigor could be ofgreat help in developing more rigorous theories concerning the2 C. Dong and R. FranklinPI. Our model is especially close to models of the shortest path
+problem and the dynamic traf ﬁc assignment problem.
+The shortest path problem studies how a single traveler ﬁnds a
+shortest route (in terms of cost, time, emissions, etc.) betweentwo vertices (or nodes) of a transportation network. Over theyears, this problem has developed various extensions. For exam-ple, the parameters are time-dependent, the cost terms are subjectto capacity constraints, or the objective is multi-dimensional.Interested readers should refer to, for example, Ahuja et al.(1993), Pardalos et al. (2005), Zhu and Wilhelm (2007), Lozanoand Medaglia (2013), Case y et al. (2014), Duque et al. (2015),
+Shi et al. (2017), and Madkour et al. (2017) for reviews and
+recent advances.
+While each traveler independently manages his/her shortest
+path optimization, the joint actions of all travelers might uninten-tionally lead to congestion in the transportation network andeventually prevent the travelers from achieving their predesignedoptimality. Dynamic traf ﬁc assignment models (e.g., Merchant
+and Nemhauser, 1978) ﬁnd equilibria for such problems. These
+algorithms generally require an iterative framework including thecalculation of shortest paths of the individuals and the adjustmentof route choices toward an equilibrium. Extensive reviews of
+these models can be found in, for example, Hoogendoorn and
+Bovy (2001), Peeta and Ziliaskopoulos (2001), Rakha and Taw-ﬁk (2009), Szeto and Wong (2012), and Wang et al. (2018).
+In this paper, we discuss how our PI model can be linked to
+the classical shortest path problem and the dynamic traf ﬁc
+assignment problem. To the best of our knowledge, we areamong the ﬁrst to discuss and encourage such connections.
+THE DIGITAL INTERNET
+Since we aim to consult the Digital Internet (DI) to guide the
+design and operationalization of the Physical Internet (PI), weare primarily interested in the following two questions concern-ing the DI: 1) How is the DI structured and 2) How is data
+transmitted in the DI. In this section, we ﬁrst present a simple
+but representative network within the DI (called a computer net-work in the computer science literature) and then discuss datatransmission by brie ﬂy explaining the relevant Internet protocols.
+The internet networks
+The DI is a complex engineering system that connects billions of
+devices all over the world and, theoretically, allows every deviceto communicate with all others. To this extent, it is hard todescribe the whole DI. For simplicity, we show a basic outlineusing some critical structures of the DI in Figure 1. We believethis simpli ﬁed picture is representative of the more complex
+structure of the DI, and suf ﬁcient for the descriptive purposes of
+this paper.
+Internet users could be governmental, commercial, or private
+entities, all equipped with terminal devices such as computers orsmart phones. The users insert ﬂows into the DI in the form of
+digital data, which is sealed in data packets and transmitted via anetwork of communication links. Routers direct the data ﬂows in
+the network, physical media such as copper and optical cables orair-based processes carry the data ﬂows over the links, and
+modems/cable terminal systems allow data to be switchedbetween different physical media. The Internet services are oper-ated by various Internet Service Providers (ISPs), which ensuresmooth ﬂows of all kinds of digital information.
+We use the term “router ”as a general term to cover the func-
+tions of classic routers, switches and hubs. We recognize thatthere are signi ﬁcant differences in the functioning of these
+devices as independent entities. However, today ’s modern routers
+have become general purpose devices incorporating the function-ality of all three of these technologies, thus our use of the term
+“router ”in its more modern manifestation.
+The internet protocols
+The operationalization of the Digital Internet, or more speci ﬁ-
+cally, the smooth data transmission in the DI, would not be pos-sible without standards. Internet protocols have been introducedto standardize and organize its operationalization. A protocoldeﬁnes the format of the packets of digital information
+exchanged between peers in the DI, how hosts should beaddressed, as well as the actions taken in the transmission of thepackets across the DI.
+The protocols have evolved over time to be organized in a
+layered architecture (Clark 1988). A network layer is often a
+mixed implementation of hardware and software and focuses ona speci ﬁc type of information transmission. When taken together,
+the collection of protocols at various layers becomes the “proto-
+col stack. ”The classic Internet protocol stack consists of ﬁve
+layers: the physical, link, network, transport, and application lay-ers (Postel 1981). It should be noted that the Internet followswhat was originally known as the Department of Defense (DoD)Internet Protocol suite (Clark 1988). This protocol suite evolvedindependently from the International Organization for Standard-ization (ISO) Open Systems Interconnection (OSI) seven-layermodel and, while similar in many ways to the OSI model, also
+differs considerably from that model (Ennis 1983). We refer the
+interested readers to Kurose and Ross (2016) for the historicalbackground of the ISO model, although “
+in fact, the inventors of
+the original OSI model probably did not have the Internet inmind when creating it ”(Kurose and Ross 2016, p.53). Since we
+want to compare the PI with the classical Digital Internet struc-ture, we stick to the ﬁve-layer DoD model to describe the ﬂow
+of messages in the Digital Internet. This approach differs fromother authors who have generally employed the OSI seven layermodel (e.g., Montreuil et al. 2012) to de ﬁne a layered approach
+to the PI. The function of each of the layers in the DoD Internet
+protocol stack is brie ﬂy outlined in Table 1.
+All the hardware and software components of the DI work
+under the contracts designed by these protocols. Whereas proto-cols in each layer focus on speci ﬁc tasks, the operation of proto-
+cols across all ﬁve layers provides an operational solution to the
+reachability problem : how to transmit data from A to B. This
+function is, after all, what the Internet was created for. Consider-ing the billions of users and vast amount of data transmitted overthe Internet, solving the reachability problem is a tremendousaccomplishment in and of itself. Note that the reachability prob-lem, as de ﬁned here, is addressed in the Internet through a subsetA stylized model for the Physical Internet 3of the DoD protocol stack, the Transmission Control Protocol/
+Internet Protocol, which is today more generally known as TCP/IP (Clark 1988).
+FROM THE DIGITAL INTERNET TO THE PHYSICAL
+INTERNET
+The Physical Internet is regarded as a conceptual analog of the
+Digital Internet. We ﬁrst discuss the similarities and then thedifferences between the two concepts, with a special focus on
+the logistics-relevant metrics embedded in the PI.
+Similarities between the DI and the PI
+Inspired by the Digital Internet network in Figure 1, we present
+part of the Physical Internet network in Figure 2.
+PI users could be both commercial and private shippers. They
+insert ﬂows into the PI in the form of various physical objects
+such as groceries and consumer goods, which are packed intostandardized packages in packing stations and then transported in
+a network of physical corridors. Mixing/distribution centers
+direct the package ﬂows in the network, transportation modes
+such as road or rail carry the package ﬂows, and intermodal ter-
+minals allow cargo to switch between different transportationmodes. The PI services are operated by various Logistics ServiceProviders (LSPs), which secure smooth deliveries of all kinds ofphysical objects.
+By comparing Figure 2 with Figure 1, additional similarities
+between the DI and the PI can be summarized (Table 2). Manyof the distinct attributes of the PI, such as collaboration betweendifferent parties in the PI, can be traced to their counterparts inthe DI. Note that this analysis only shows general comparisons
+between the DI and the PI. Its objective is to provide a better
+understanding of the two concepts going beyond their name-sakes. More advanced and/or exceptional cases are always possi-ble. For example, not all physical objects can be packed intostandardized boxes. Some cargo will require special handling inpacking, storing, etc. Typical of this example would be bulkcargo such as crude oil or grains, large-sized machinery parts,hazardous goods, and so on.
+In its de ﬁnition, the PI offers seamless interconnections of
+logistics services (Montreuil et al. 2013). In the light of thiscommitment, the PI is, despite all its other bene ﬁts,ﬁrstly an
+interconnected logistics system composed of a network of logis-
+tics networks. It should be able to deliver any physical item fromany origin A to any destination B. As a result, the reachabilityModem/cable 
+terminal systemRouter PC Mobile phone
+Fiber cable Ethernet cable Wireless/airHome networkNa/g415onal or global ISP
+Local or regional ISPFigure 1: A simple schematic of part of the Digital Internet.
+Table 1: How data ﬂow is operationalized in a ﬁve-layer Inter-
+net protocol model
+Layer Operation
+Application
+LayerCommunicates applications/services between
+separate Internet users. An example is an email
+application that sends an email from onecomputer to another.
+Transport
+LayerEstablishes the connection between Internet
+users to send data and keeps track of thesending process.
+Network
+LayerManages the routing of a data packet as it
+traverses the Internet from the sender to thereceiver. The DI uses a connectionless modelallowing the network itself to route a messagefrom origination address to destination address
+using a “best effort ”approach to the
+transmission of the packets.
+Link Layer Governs the data transmission within a single
+connection, for example, the ﬁber connection.
+Physical
+LayerEnsures that the 0/1 digital data are transmitted
+over the physical media of the connection (e.g.,theﬁber connection mentioned before).4 C. Dong and R. Franklinproblem should be the ﬁrst problem to confront. This problem is
+conceptually similar to the reachability problem addressed by theDI. In the process of delivering a physical object, there arenumerous protocol-like international agreements that standardizetheﬂows and ensure the smooth deliveries of cargos across the
+world (e.g., Incoterms, customs agreements, international modallegislation, international postal agreements). Prior work in the
+area of PI shipments by Montreuil et al. (2012) uses a seven-
+layer physical transportation protocol stack to model how freightmight ﬂow over the PI. Their model breaks the task of shipping
+an item over the PI into seven interconnected layers of smallertasks facilitating the ef ﬁcient and standardized movement of
+freight. This detailed breakdown of tasks, while organizedslightly differently from our ﬁve-layer comparison, is structurally
+similar to the comparison provided in Table 2. Hofman et al.(2017) examine differences between the PI layers proposed byMontreuil et al. (2012) and the layers of the DI giving additionalinsights into the similarities (and differences) between PI and DI
+activities as outlined in Table 2.
+The design of the DI and its protocols provide users with a
+“connection-free ”service: They can simply use the DI without a
+need to understand how their data will be routed from its origi-nation point to its destination. A similar “connection-free ”ser-
+vice can be implemented in the PI: A PI user should be able totrust the PI and its services to ship their goods to any destinationwithout knowing (or caring) about the route that the goods take.An LSP controlling several key nodes in the network can routethe shipment via any convenient route so long as it arrives as peragreement between the shipper and LSP. For example, when a
+box is sent from Beijing to Brussels, the detailed route, Beijing –-
+Tianjin –Rotterdam –Brussels, can remain anonymous and the
+exact route taken is left up to the operational considerations ofthe LSP and their quality of service agreements with the shipper.
+Differences between the DI and the PI
+Although the PI is regarded as an analog of the DI, they are two
+completely different things. The basic unit transported by the DIis digital data, electronic 0s and 1s. In other words, a ﬂow in the
+DI can be exclusively represented by a sequence of standardizedhigh or low voltage values, light pulses, or carrier waveamplitudes and frequencies. The binary nature of signals used to
+encode information in digital packets establishes the basis of theDI and all relevant applications and protocols are designed basedon this fundamental fact.
+In the world of the PI, however, the basic ﬂow consists of var-
+ious physical objects that may be quite different from each other.There is no such thing as a standardized 0/1 unit that is the fun-
+damental building block of these physical objects. Even if differ-
+ent physical objects can be packed into the same standardizedboxes, and these boxes are treated equally in the PI by the LSPs,the boxes are valued differently from the eyes of the PI usersbecause of their contents. Users probably do not care if theyreceive the same box in each shipment, but they do care if whatis in the box is different from what they expect.
+The Internet also employs the concept of packet retransmis-
+sion, which allows packets that have been lost or discarded dueto congestion at a router to be retransmitted after a period oftime. Retransmission of physical goods is a costly undertaking
+and something that no user of the PI would appreciate seeing
+happen. Transporting physical objects instead of transmitting dig-ital signals, therefore, requires additional effort in physical distri-bution. Important logistics metrics, therefore, in physicaldistribution need to be confronted. These metrics can be sortedintoﬁve major categories: cost, time, schedule, emissions, and
+capacity.
+Cost
+Whereas sending an email incurs trivial variable cost linked toelectricity consumption (infrastructure costs are generallyincluded in the bandwidth and connection fees charged by ISPsand carriers), distributing a physical object incurs substantialvariable costs linked to transportation modes, packing andunpacking, loading and unloading in distribution centers, etc.These shipment costs are linked to the ﬂow of each single object
+in the PI and are oftentimes the most critical factor for PI users.Note, the cost here not only means the monetary fee paid for
+logistics services, but also the externalities such as accidents,
+noise, pollution, and congestion (because of its increasing impor-tance, emissions are listed as a separate metric below), whichcan be internalized (e.g., Maibach, Schreyer, Sutter, van Essen,et al. 2007).
+Cargo Packing sta/g415on Mixing/distribu/g415on center
+Terminal Road connec/g415on Rail connec/g415onNa/g415onal or global LSPLocal or regional LSP
+End userFigure 2: A simple schematic of part of the Physical Internet.A stylized model for the Physical Internet 5Time
+Since digital signals are traveling almost at the speed of the light,
+their lags in the DI are, in most scenarios, negligible. The ﬂow-
+ing speed and arrival time of physical objects in the PI, which issubject to transportation modes, availability of labor, handling
+time in the transshipment nodes, etc., are critical to PI users.Transit times are not negligible and vary signi ﬁcantly by network
+routing decisions.
+Schedule
+The transmission of digital information is almost instantaneous.
+Should problems arise in the transmission process, the speed at
+which rerouted signals or retransmitted packets travel makedelays negligible (note that there are exceptions for certain infor-mation ﬂows requiring continuous streaming or assured delivery).
+These facts mean that for most users of the DI the scheduling ofinformation deliveries is not generally a concern. However, theschedule of ﬂow in the PI is a dynamic and potentially problem-
+atic process subject to the real-time status of the network. Forexample, if congestion arises or a vehicle breaks down, newroutings may need to be implemented that lead to delayed deliv-eries. Such delays are of concern to shippers, customers, and ser-
+vice providers as they may generate penalties and lost business
+and other additional costs.
+Emissions
+Although the running of electronic devices in the DI requires sig-niﬁcant energy, the marginal energy consumption of sending an
+email is almost negligible. The emissions from the DI can be
+regarded as a “ﬁxed cost ”term that is linked to the rigid infras-
+tructures, but not to the size of the data transmitted. In the PI,however, emissions primarily arise from the movements of thephysical objects. The emissions from the PI are a “variable ”term
+and are proportional to the goods delivered. This provides anincentive for shippers and logistics service providers to reduceemissions via ef ﬁcient logistics operations.
+Capacity
+In the DI, routers frequently send data packets to test the conges-tion of adjacent routes and routers. If data transmission in onepathway is congested, the router can immediately use other ave-nues for transmission. The allocation of capacities in each routeisﬂexible, and it is more critical that the entire network has suf-
+ﬁcient capacity for all data transmissions. In the PI, however,
+capacity is a strict bound for each participant in the network. Forexample, if a truck is fully loaded, additional goods must wait
+for the next available truck. A spontaneous shift to another trans-
+portation mode could be much costly or even impossible. Thisrequires sophisticated capacity management for each freightmovement in the PI.
+Theﬁve metrics outlined above do not stand alone. As noted,
+they are often inter-connected and appear together. LSPs mightwant to quote their service to the PI user by combining cost withtime using their evaluation of the transit route reliability and theuser ’s speci ﬁed quality of service requirements. Because users,
+downstream service providers and customers are interested in thescheduled movement of the goods, real-time updates of the state of
+the PI are required. For example, after the user has contracted for a
+speciﬁc time and service level using the PI, an accident occurs and
+blocks part of the original planned route. In this case, the PI shouldbe able to provide immediate updates and reoptimize the entireroute. Given the originally negotiated terms, PI users might wantto accept proposed changes in cost and/or service level based onTable 2: The similarities between the Physical Internet and the
+Digital Internet
+Physical internet Digital internet
+User Private and
+commercial shippersPrivate and
+commercial Internet
+users
+Flow Physical objects Digital dataUnit of the
+ﬂowStandardized
+packages, forexample, standardcontainers, theMODULUSCHCABox (EuropeanCommission 2016)Data packets
+Routing of the
+ﬂowPorts, cross dock
+facilities,
+distribution centers,multi-modal transfercenters, etc.Routers and switches
+Carrier of the
+ﬂowTransportation
+modes, for example,roads, rail, sea, air,inland waterway,pipelinePhysical medias, for
+example, coaxial,ﬁber, air (wireless)
+Protocols Standardized sending/
+receiving processesFive-layer Internet
+protocol model
+Service
+providersLogistics service
+providersInternet service
+providers
+Collaboration
+betweenoperatorsTransshipment and
+revenue sharingbetween differentLSPs, groupageservices, palletnetworksRoaming and revenue
+sharing betweendifferent ISPs
+Collaboration
+between usersShared transportation
+services, sharedwarehousing, etc.Peer-to-peer
+networking,intranets, etc.
+Collaboration
+between auser and anoperator3PL services Dedicated access
+lines (e.g., T1 links)
+Ownership of
+basicinfrastructurePartly government-
+owned (highways,bridges, etc.)Primarily privately
+owned (by theISPs), but somegovernmentownership, forexample, nationaltelephone carriers,
+etc.6 C. Dong and R. Franklinthe state changes of the PI, stick to their old plans and accept
+delays, or seek to penalize their service providers for failing to liveup to their negotiated commitments. In addition, optimal plans atthe individual shipment level need to be consolidated to predict thestatus of the PI network, which further in ﬂuences the individual
+planning problems in a recursive fashion.
+The DI also needs to solve optimization problems. The short-
+est path algorithm is used for routing data packets in a local areanetwork by minimizing the number of jumps in the routing pro-cess. In a pure IP network, the shortest path is chosen even if itbecomes congested. Congestion management is historically han-
+dled through relatively simple procedures. The basic procedure is
+to simply discard packets when a router or a link becomes over-loaded and retransmit them. More advanced approaches, whichvary by router manufacturers, are based on back-off signals thatrequire sending nodes to delay a random amount of their trans-mission, change packet size, reroute packets, etc. More recentand sophisticated traf ﬁc engineering approaches look at band-
+width scheduling and prioritization of packet ﬂows for IP-based
+messages. For example, multi-protocol label switching (MPLS)allows a network manager to manage traf ﬁcﬂows in a more
+ﬁne-grained and prioritized manner than standard TCP/IP. MPLS
+is the primary way that network service providers condition and
+prioritize traf ﬁcﬂows for video and voice.
+Even though the DI also needs to perform some optimizations
+in its operations, for example, dynamically leveling network loadat hubs and maximizing the robustness of transfers, they aremostly handled digitally or through simple manual rules andtherefore have little impact on the metrics (e.g., cost, emissions,schedules) of the entire system. For each single freight move-ment in the PI, various logistics metrics must be jointly includedin the solution process as parameters, constraints, and/or objec-tive functions. Considering the large size of the DI and PI sys-tems, even one additional constraint could impact solution
+efﬁciency. The incorporation of the various logistics metrics that
+do not exist in the DI can make the complexity of the PI signi ﬁ-
+cantly greater than that of the DI. To highlight this complexity,the PI not only needs to solve the reachability problem, that is,routing from A to B, but also must confront a much more com-plex optimality problem, that is, optimizing the logistics metricsin the physical distribution activities.
+A STYLIZED MODEL OF THE PHYSICAL INTERNET
+The aforementioned comparison between the DI and the PI
+reveals a number of unique features of the PI. Based on theseunique features, an initial model to support the implementation
+of the PI should incorporate at least the following elements:
+The diverse participants that make up the PI, such as packing
+stations, distribution centers, transportation modes, and corri-dors
+The logistics metrics, such as cost, time, and emissions,
+which de ﬁne acceptable performance for each participant in a
+logistics network.
+The dynamics and time-dependent constructs for each ship-ment in the network.The representation of the reachability and optimality problemsof the PI.
+As a starting point for such a model, we propose a simple
+graph theoretic model of the PI covering its distinct features and
+discuss the connections between the shipment of a single object
+and the classical shortest path problem. After that, we discussthe simultaneous shipments of multiple objects in the networkand the connections to the dynamic traf ﬁc assignment problem.
+Model formulation
+Consider a directed graph G¼ðV,EÞconsisting of a nonempty
+ﬁnite set Vof vertices, and a nonempty ﬁnite set Eof edges
+(Figure 3). The graph Ghas a distinguished source vertex s∈V
+and a sink vertex r∈V, representing the sender and the receiver
+of the shipment. Other elements in set V, denoted as
+ðv
+1,v2,⋯,vMÞ, represent the infrastructures in the PI, such as
+packing stations (the black vertices), routing centers, distribution
+centers, and terminals. The elements in set E, denoted as
+ðe1,e2,⋯,eNÞ, are ordered pairs of distinct vertices, specifying
+the transportation corridors between two infrastructures in thePhysical Internet.
+Each edge with index i∈Nis associated with a weight
+w
+e
+iðce
+i,le
+i,me
+i,qe
+i,tÞ, representing the ﬁve logistics metrics discussed
+in Section 4.2. The weight is a ﬁve-element vector, expressing in
+period t, the transportation service that covers this corridor ei:It
+incurs a monetary cost ce
+i, a lead time le
+i, emissions me
+i, and is
+subject to the capacity constraint qe
+iof this edge in t. Each vertex
+with index j∈Mis also associated with a weight vector
+wv
+jðcv
+j,lv
+j,mv
+j,qv
+j,tÞ, which denotes that the operation in this infras-
+tructure vjwith capacity qv
+jin period tcosts cv
+i, emissions mv
+j,
+and requires lead time lv
+i. Note that weights will most likely be
+dynamic in a real-world situation changing upon a number offactors such as load, personnel and asset availability, andmacroeconomics.
+A single PI user wants to ﬁnd a path from stor, subject to
+constraints in various logistics metrics. Again note that all theweights are dynamic and change in real-time.
+Analysis and heuristic
+The PI should be able to solve the optimality problem at an indi-
+vidual user level, and then consolidate the knowledge from allindividual problems to manage the overall network status.Depending on the requirements of the PI users, the PI is sup-posed to solve different logistics problems and, therefore, themodel could have various objective functions. For example, if aPI user only has a single objective, for example, minimizing thetotal shipping time from s to r, then the PI model is equivalentto the classical single-source shortest path problem (SSSP).
+Nevertheless, the PI might change in time and variations of
+the SSSP are needed. In the simplest case, with constant network
+and shipping time, the SSSP is static and can be easily solved
+using the classical Dijkstra ’s algorithm (Dijkstra 1959). If the
+network changes over time (e.g., a pathway is blocked due to anaccident), the SSSP is dynamic and needs combinatorial proper-ties to obtain ef ﬁcient results (e.g., Demetrescu and ItalianoA stylized model for the Physical Internet 72006). If the shipping time changes over time but is still pre-
+known (e.g., it costs twice the time in the rush hour), the SSCPis time-dependent and can be solved using label-correcting algo-rithms (e.g., Dean 2004). If the shipping time is completely ran-dom, the SSCP is stochastic and the objective is to minimize theexpected total time (e.g., Miller-Hooks and Mahmassani 2000).
+In reality, PI users might have various requirements that sig-
+niﬁcantly complicate the solution processes. For example, a PI
+user might want to jointly optimize time, cost, and emissions.This will extend the model to a multi-objective, time-dependent
+shortest path problem. A PI user could also set one logistics met-
+ric as a hard constraint and optimize another, for example, toship a parcel at the lowest cost within seven days. The modelwill then be extended to a capacitated time-dependent shortestpath problem. Since different PI users might have different pref-erences over the logistics metrics, the PI needs to design tailoredalgorithms to meet them.
+Even the objective function can be time-dependent. For exam-
+ple, due to a change in the network topology, the shipment mightbecome stuck midway through its transport and cannot be deliv-ered on time. The shipper could then be required to make an
+interim decision such as cost minimization instead of time mini-
+mization or could simply request the return of the shipment. Thisrequires the PI to offer real-time tracking and tracing along withﬂexible routing adjustments in the shipment processes.
+The relatively “simple ”variation of the SSSP is not an easy
+problem to solve. To solve the different extensions concerningtheﬁve logistics metrics of the PI problem to optimality, the
+most sophisticated of these current algorithms would be over-whelmed by the size and complexity of the PI problem itself.Novel heuristics that are developed based on the distinct featuresof the PI are needed.
+Inspired by the “reachability ”as well as “optimality ”features
+of the PI, we propose a simple iterative two-stage solutionheuristic as an example of how one might approach the dif ﬁcult
+problem of ﬁnding optimal solutions to shipments over the PI. In
+theﬁrst stage, the reachability problem is solved: Given the cur-
+rent graph, ﬁnd all walks from the current vertex v
+jto the receiv-
+ing vertex r.Awalk between two vertices denotes a sequence of
+directed edges from the initial vertex to the ﬁnal vertex. In the
+second stage, the optimality problem is solved: From all thevalid walks, select the one that satis ﬁes the user ’s metric require-
+ments. Whenever the part of the PI involved in the predecidedsolution is changed, the topology of the graph will be accord-
+ingly updated and the above two-stage optimization problemrecalculated, this process continues until the physical objectﬁnally reaches the receiver. The ﬂow chart of the algorithm is
+shown in Figure 4.
+The key to our algorithm is splitting a complex problem (the
+PI model) into two sub-problems (the reachability and optimalityproblems). Managerially speaking, these are two different prob-lems embedded in the PI and can be decoupled, and our heuristicnaturally mimics the practical operation of the PI. Technically
+speaking, our approach facilitates the solution of a more complex
+problem via a sequential and iterative process of solving twosimpler sub-problems, which reduces the entire computing effort.In reality, the feasible set of the reachability problem might bestable because similar problems have been solved by the PI anda large proportion of the solutions are prestored. For example, ifa shipment will be delivered from Shanghai to Berlin, it is mostprobable that the ocean vessel terminal of Hamburg will beincluded in one of the reachable walks and this solution has beenseen in other problems multiple times before.
+The PI as a dynamic traf ﬁc assignment problem
+The aforementioned model re ﬂects the routing of a single ship-
+ment without considering the status of the entire PI network.Given the capacity of the PI, when multiple users are simultane-ously using the PI, congestions might happen and eventuallyimpact every shipment in the entire PI network. Knowledge con-cerning all PI users then needs to be consolidated to predict andmanage the aggregated status of the PI network. This problemfalls into the scope of the classical dynamic traf ﬁc assignment
+problem in the transportation literature.
+A popular heuristics for this kind of problem is to iterate the
+network until equilibrium (if found) is achieved (Figure 5). In
+the beginning, the logistics metrics of the network are obtained
+and each shipment solves its extended shortest path problem.The joint decisions of all shipments will change the traf ﬁcﬂows
+in the PI network, which results in a set of new logistics metrics.Each shipment then needs to solve its extended shortest pathproblems again. The iterative process then converges to an equi-librium solution for the shipments, and the solution of theextended shortest path problem can be obtained using our algo-rithm shown in Figure 4.Figure 3: A stylized network model for the Physical Internet.8 C. Dong and R. FranklinIt should be noted that Figure 5 is only an initial framework,
+demonstrating the feasibility of using the DTA literature to sup-port the implementation and theory-building of the PI. In thisframework, the characteristics of the PI and the principles of theDTA models can be linked. For example, the reachability prob-lem can be represented by route enumeration of the network, theprocess of identifying a set of alternative routes using SP analy-sis (Bovy and Fiorenzo-Catalano 2007), and the optimality prob-lem can be tackled by various forms of network assignment,
+such as generalized cost (weighted sum of cost and time) mini-
+mization. The shipment of a package in the PI under speci ﬁc
+requirements from the PI user aligns with the “travel choice prin-
+ciple ”of the DTA, and the smooth operations of the PI re ﬂect
+the existence of equilibriums in the DTA. Our simple heuristiccan and should be enriched in various ways in future research.However, once again, it is not the focus of this paper for thoseextensions.
+The PI network will be the largest logistics network ever stud-
+ied and its related DTA model will be of a huge size. Previousalgorithms of the DTA will certainly need to be updated. The PI
+network is also large in terms of the stakeholder involved, who
+may have different objectives. For example, one user may want
+the cheapest service while the other the fastest delivery, and thePI operators need to quote different offers given the current net-work status.
+One typical question addressed in DTA network analyses is
+the choice between Wardrop ’s two network equilibria: the system
+equilibrium and the user equilibrium. Because of the size of thePI, it is dif ﬁcult to imagine a single super-agent that optimizes
+the sum of costs over all users. It is more likely that user equilib-rium will prevail: Each single shipment will be optimized indi-vidually. However, a logistics service provider may consolidate
+freight from several shipments and minimize the sum of total
+costs. System equilibria therefore exist in such sub-problems.
+Reﬂection of the PI characteristics in the model
+Montreuil (2011) has highlighted 13 characteristics of the PI that
+achieve the global logistics sustainability vision. Our currentmodel, together with its potential extensions, covers these charac-teristics as illustrated in Table 3. Using graph theory, a rich liter-ature exists to support innovations in the conceptualization andoperationalization of the PI using the proposed model as an ini-tial starting point.
+Model extension
+The current model illustrates the optimality problem of the PI in
+the aspects of cost, schedule, and emissions. Statistically speak-
+ing, only the ﬁrst moments of these parameters are evaluated. It
+could be interesting to measure the second moments of theseobjectives. The second moment of the lead time is its punctualityand the second moments of cost and emissions could also be achanging number depending on, for example, the shipment vol-umes or equipment type. It may be necessary to consider boththeﬁrst and second moments together. For example, sometimes
+a shipper might want to choose a more punctual transportationservice, even if that requires a longer, but more reliable leadtime.
+The PI could also consider other objectives besides cost, lead
+time, and emissions. A typical example would be modal usage.Each vertex and edge of the graph in Figure 3 could then beFigure 4: The Physical Internet as an extended shortest path
+problem, and the ﬂow chart of the solution algorithm.
+Find the logis/g415cs 
+metrics of the 
+networkSolve the extended 
+shortest path 
+problems
+Adjust route 
+choices toward 
+equilibriumFigure 5: The dynamic traf ﬁc assignment problem can be
+solved using iterations.A stylized model for the Physical Internet 9associated with an additional weight, representing the mode
+employed for the shipment. An objective function maximizingrail usage, for example, similar to Equations (1) and (2), wouldthen be added to the model.
+Additional practical constraints could be incorporated into the
+model. For example, a warehouse may have speci ﬁc in-bound
+delivery time windows, the standardized packages have differentsizes instead of one, and the shipper might want reverse logisticsservices in the PI. These constraints could also be dynamic. Forexample, if the present optimality problem does not give feasiblesolutions, the shipper (or any other responsible person) is noti-
+ﬁed, who can decide whether to quit the PI, or accept the new
+cost/services conditions.
+SUMMARY
+The main contribution of this paper is the proposal of a feasible
+Physical Internet (PI) model-based conceptual framework thatsupports its implementation. The model is a stylized representa-tion of the PI network, and bridges the current gap between thehigh-level PI concept and its expected bene ﬁts. We ﬁrst compare
+the Physical Internet with its conceptual metaphor, the DigitalInternet, and identify the reachability and optimality problems ina network. On the basis of this knowledge, we use a graph to
+model the PI, discuss the link to the classical transportation theo-ries, and propose a simple algorithm as a heuristic solution.
+Since the PI is a complex concept that potentially covers all
+aspects of future transportation problems, our stylized modelobviously needs extensions. For example, for the cargo that can-not be packed into standardized boxes, the graph will be chan-ged. When a natural disaster happens, infrastructures aredamaged and governments might interfere, and special modesmight be needed for such special cases. In addition, our modelfocuses only on transportation issues, not others such as inven-
+tory management in the network. Future research could combine
+both transportation and inventory decisions in the PI.
+More characteristics of the PI could be incorporated into the
+model. For example, the cost and time could depend on moreparameters such as the shipment size, node throughput times, arcconstraints such as capacities, speed limits, carrier limitations,etc. Transportation models that deal with generalized travel util-ity incorporating all performance-relevant metrics can be used insuch kind of PI optimizations. Multiple cargos could be sent intothe PI and corresponding collaboration and joint replenishmentopportunities could be studied. A possible use of the PI would
+be to distribute and store inventory that does not yet have a ﬁnal
+destination. In this case, cargo would be pushed into the PI,Table 3: The main characteristics of the PI mentioned in Montreuil (2011) can be incorporated in our model
+Characteristics of the PI (Montreuil 2011) Covering of the characteristics in our PI model
+Encapsulate merchandises in world-standard smart green
+modular containersA packing station is modeled as a vertex in the graph.
+Aiming toward universal interconnectivity Interconnectivity is modeled as edges connecting vertices in the graph.
+Evolve from material to pi-container handling and
+storage systemAny material into the PI (vertex s) must ﬁrst travel to a packing station
+(solid vertex) and then ﬂow in the PI.
+Exploit smart networked containers embedding smart
+objectsThe current weights of the edges/verities of the graph can be extended,
+representing additional information linked to the smart objects/containers
+Evolve from point-to-point hub-and-spoke transport to
+distributed multi-segment intermodal transportOur graph is not hub-and-spoke. Instead, it represents a general distributed
+network with dynamic changes in topology.
+Embrace a uni ﬁed multi-tier conceptual framework The vertices and edges between s and r are general settings and can
+represent any more speci ﬁc multi-tier networks. Nodes are purposely left
+simple, but could be modeled in a hierarchical manner in which PIprotocols operate similar to the sub-net operations that occur in the DI.
+Activate and exploit an Open Global Supply Web The graph can represent any kind of global supply web.
+Design products ﬁtting containers with minimal space
+wasteThis is more from the production side and is not included in our PI model
+Minimize physical moves and storages by digitally
+transmitting knowledge and materializing objects aslocally as possibleAn additional weight of the edges and vertices representing the physical
+moves can be incorporated into the current graph to tackle this point. Thesolution method will be similar to the current lead time minimizationprocess.
+Deploy open performance monitoring and capability
+certiﬁcationsThe real-time update of the topology of the graph is based on real-time
+performance monitoring of the PI.
+Prioritize webbed reliability and resilience of networks Reliability and resilience can be modeled as how often/how much the
+topology of the graph is changed.
+Stimulate business model innovation There is a rich body of graph theory literature to support innovations in the
+current model.
+Enable open infrastructural innovation There is a rich body of graph theory literature to support innovations in the
+current infrastructure.10 C. Dong and R. Franklinwhile it is still not clear who would be the ﬁnal receiver and the
+cargo would need to be stored somewhere in the PI (referring toAmazon ´s prepositioning goods for rapid ful ﬁllment). The reach-
+ability problem and the sequential optimality problem wouldneed to be updated as to who the ultimate receiver would be.
+Many other scenarios can be envisioned that extend the styl-
+ized model outlined in this paper. As the PI is a new and emerg-ing research area, it has not been the intention of this paper toexhaustively study the many possible issues that must beaddressed to operationalize the PI concept. However, it is hopedthat this paper helps in establishing the ongoing development of
+the PI concept so that the bene ﬁts identi ﬁed thus far from this
+approach to transport and logistics can ultimately be realized.
+Since the purpose of this paper is to understand the features of
+the PI and propose a model to support its implementation, adetailed and rigorous mathematical analysis has not been pre-sented. Future research could study the properties and algorithmsof the model, and apply empirical validations to begin laying thefoundation for a more rigorous algorithmic foundation of the PI.
+ACKNOWLEDGEMENTS
+Open access funding enabled and organized by Projekt DEAL.
+REFERENCES
+Ahuja, R.K., Magnanti, T.L., and Orlink, J.B. 1993. Network
+Flows: Theory, Algorithms, and Applications . New Jersey:
+Prentice Hall.
+Ambra, T., Caris, A., and Macharis, C.. 2019. “Towards Freight
+Transport System Uni ﬁcation: Reviewing and Combining the
+Advancements in the Physical Internet and Synchromodal
+Transport Research. ”International Journal of Production
+Research 57(6):1606 –1623.
+Ballot, E., Montreuil, B., and Meller, R.D. 2014. The Physical
+Internet –The Network of Logistics Networks . Paris: La
+Documentation Française.
+Boston Consulting Group. 2015. “A Hard Road: Why CPG
+Companies Need a Strategic Approach to Transportation ”.
+Bovy, P.H.L., and Fiorenzo-Catalano, S.. 2007. “Stochastic
+Route Choice Set Generation: Behavioral and ProbabilisticFoundations. ”Transportmetrica 3(3):173 –189.
+Casey, B., Bhaskar, A., Guo, H., and Chung, E.. 2014. “Critical
+Review of Time-Dependent Shortest Path Algorithms: A
+Multimodal Trip Planner Perspective. ”Transport Reviews 34
+(4):522 –539.
+Cerf, V.G., and Kahn, R.E.. 1974. “A Protocol for Packet
+Network Intercommunication. ”IEEE Transactions on
+Communications 22(5):637 –648.
+Chen, K., Xu, G., Xue, F., Zhong, R.Y., Liu, D., and Lu, W.. 2018.
+“A Physical Internet-Enabled Bu ilding Information Modelling
+System for Prefabricated Construction. ”International Journal of
+Computer Integrated Manufacturing 31(4–5):349 –361.
+Cimon, Y. 2014. “Implementing the Physical Internet Real-
+World Interface: Beyond Business Models, the Devil Is in the
+Details ”.I n First International Physical Internet Conference .
+Quebec City, Canada.Clark, D.. 1988. “The Design Philosophy of the DARPA Internet
+Protocols. ”ACM SIGCOMM Computer Communications
+Review 18(4):106 –114.
+Comer, D.E. 2014. Internetworking with TCP/IP . 6th ed.
+Pearson.
+Commission, European. 2016. “Modular Logistics Units in
+Shared Co-Modal Networks. ”. https://cordis.europa.eu/project/
+rcn/105754_en.html .
+Dean, B. 2004. “Shortest Paths in FIFO Time-Dependent
+Networks: Theory and Algorithms. ”Rapport Technique .
+Demetrescu, C., and Italiano, G.F.. 2006. “Dynamic Shortest
+Paths and Transitive Closure: Algorithmic Techniques and
+Data Structures. ”Journal of Discrete Algorithms, Special
+issue in honour of Giorgio Ausiello 4(3):353 –383.
+Dijkstra, E.W.. 1959. “A Note on Two Problems in Connexion
+with Graphs. ”Numerische Mathematik 1:269 –271.
+Duque, D., Lozano, L., and Medaglia, A.L.. 2015. “An Exact
+Method for the Biobjective Shortest Path Problem for Large-Scale Road Networks. ”European Journal of Operational
+Research 242(3):788 –797.
+Ennis, G.. 1983. “Development of the DoD Protocol Reference
+Model. ”,6 –7. Proceedings of the Symposium on
+Communications Architectures & Protocols
+EUROSTAT. 2015. “Greenhouse Gas Emission Statistics. http://
+Ec.Europa.Eu/Eurostat/Statistics-Explained/Index.Php/Greenhouse_gas_emission_statistics. Accessed on 14December, 2016 ”.
+Farrel, A. ed. 2020. "Overview and Principles of Internet Traf ﬁc
+Engineering. "TEAS Working Group. Draft RFC3272 v7.
+IETF Trust.
+Hofman, W., Spek, J., and Brewster, C.. 2017. “Applying
+Blockchain Technology for Hyperconnected Logistics. ”In
+Fourth International Physical Internet Conference
+Hoogendoorn, S.P., and Bovy, P.H.L.. 2001., vol. 215, 283 –303.
+Proceedings of the Institution of Mechanical Engineers, Part I
+Ji, S., Peng, X., and Luo, R.. 2019.
+“An Integrated Model for
+the Production-Inventory-Distribution Problem in the PhysicalInternet. ”International Journal of Production Research 57
+(4):1000 –1017.
+Kurose, J., and Ross, K. 2016. Computer Networking: A Top-
+Down Approach . 7th ed. New Jersey: Pearson.
+Leiner, B.M., Cerf, V.G., Clark, D.D., Kahn, R.E., Kleinrock,
+L., Lynch, D.C., Postel, J., Roberts, L.G., and Wolff, S..2009. “A Brief History of the Internet. ”ACM SIGCOMM
+Computer Communication Review 39(5):10.
+Licklider, J.C.R., and Clark, W.E. 1962. “On-Line Man-
+Computer Communication ”.I n Proceedings of the May 1 –3,
+1962, Spring Joint Computer Conference on –AIEE-IRE ’62
+(Spring), 113 . San Francisco, California: ACM Press.
+http://portal.acm.org/citation.cfm?doid =1460833.1460847.
+Lin, Y.-H., Meller, R.D., Ellis, K.P., Thomas, L.M., and Lombardi,
+B.J.. 2014. “A Decomposition-Based Approach for the
+Selection of Standardiz ed Modular Containers. ”International
+Journal of Production Research 52(15):4660 –4672.
+Lozano, L., and Medaglia, A.L.. 2013. “On an Exact Method for
+the Constrained Shortest Path Problem. ”Computers &
+Operations Research 40(1):378 –384.
+Madkour, A., Aref, W.G., Rehman, F.U., Rahman, M.A., and
+Basalamah, S.. 2017. “A Survey of Shortest-PathA stylized model for the Physical Internet 11Algorithms. ”ArXiv:1705.02044 [Cs], May .http://arxiv.org/
+abs/1705.02044. http://arxiv.org/abs/1705.02044..
+Maibach, H., Schreyer, C., Sutter, D., van Essen, H.P., Boon,
+B.H., Smokers, R., Schroten, A., Doll, C., Pawlowska, B.,and Bak, M.2007. “Handbook on Estimation of External
+Costs in the Transport Sector, Report Produced within theProject Internalisation Measures for All External Costs ofTransport (IMPACT) ”.
+Markillie, P.. 2006. “The Physical Internet. ”The Economist .
+Merchant, D.K., and Nemhauser, G.L. 1978. “A Model and an
+Algorithm for the Dynamic Traf ﬁc Assignment Problems. ”
+Transportation Science 12(3):183 –199.
+Mervis, J.. 2014. “The Information Highway Gets Physical: The
+Physical Internet Would Move Goods the Way Its NamesakeMoves Data ".”Science 344(6188):1104 –1107.
+Miller-Hooks, E.D., and Mahmassani, H.S.. 2000. “Least Expected
+Time Paths in Stochastic, Time-Varying TransportationNetworks. ”Transportation Science 34(2):198 –215.
+Mohamed, I., Klibi, W., Labarthe, O., Deschamps, J.-C., and
+Babai, M.Z.. 2017. “Modelling and Solution Approaches for
+the Interconnected City Logistics. ”International Journal of
+Production Research 55(9):2664 –2684.
+Montreuil, B.. 2011. “Toward a Physical Internet: Meeting the
+Global Logistics Sustainability Grand Challenge. ”Logistics
+Research 3(2–3):71 –87.
+Montreuil, B., Ballot, E., and Fontane, F. 2012. “An Open
+Logistics Interconnection Model for the Physical Internet ”. In.
+Bucharest, Romania: Proceedings of the 14th IFACSymposium on Information Control Problems inManufacturing .
+Montreuil, B., Meller, R.D., and Ballot, E. 2013. “Physical Internet
+Foundations ”.I n Service Orientation in Holonic and Multi-
+Agent Manufacturing and Robotics , edited by T. Borangiu, A.
+Thomas, and D. Trentesaux, 151 –166. Berlin: Springer.
+Pan, S., Ballot, E., Huang, G.Q., and Montreuil, B.. 2017.
+“Physical Internet and Interconnected Logistics Services:
+Research and Applications. ”International Journal of
+Production Research 55(9):2603 –
+2609.
+Pan, S., Nigrelli, M., Ballot, E., Sarraj, R., and Yang, Y.. 2015.
+“Perspectives of Inventory Control Models in the Physical
+Internet: A Simulation Study. ”Computers & Industrial
+Engineering 84(June):122 –132.
+Pardalos, P.M., Du, D.-Z., and Graham, R.L. eds. 2005.
+Handbook of Combinatorial Optimization . Second Edi. New
+York: Springer.
+Peeta, S., and Ziliaskopoulos, A.K.. 2001. “Foundations of
+Dynamic Traf ﬁc Assignment: The Past, the Present and the
+Future. ”Networks and Spatial Economics 1:233 –265.
+Petersen, L.L., and Davie, B.S. 2011. Computer Networks: A
+Systems Approach . 5th ed. Elsevier.
+Postel, J.1981. Internet Protocol DARPA Internet Program
+Protocol Speci ﬁcation.
+Rakha, H., and Taw ﬁk, A. 2009. “Trafﬁc Networks: Dynamic
+Trafﬁc Routing, Assignment, and Assessment ”.I n
+Encyclopedia of Complexity and Systems Science , edited by
+Robert A. Meyers, 9429 –9470. New York, NY: Springer,
+New York. doi: 10.1007/978-0-387-30440-3_562.
+Sarraj, R., Ballot, E., Pan, S., Hakimi, D., and Montreuil, B..
+2014. “Interconnected Logistic Networks and Protocols:Simulation-Based Ef ﬁciency Assessment. ”International
+Journal of Production Research 52(11):3185 –3208.
+Sarraj, R., Ballot, E., Pan, S., and Montreuil, B.. 2012.
+“Analogies between Internet Network and Logistics Service
+Networks: Challenges Involved in the Interconnection. ”
+Journal of Intelligent Manufacturing 25(6):1207 –1219.
+Shi, N., Zhou, S., Wang, F., Tao, Y., and Liu, L.. 2017. “The Multi-
+Criteria Constrained Shortest Path Problem. ”Transportation
+Research Part E: Logistic s and Transportation Review 101:13 –29.
+Sternberg, H., and Norrman, A. 2017. “The Physical Internet –
+Review, Analysis and Future Research Agenda. ”International
+Journal of Physical Distribution & Logistics Management2
+47(8):736 –762.
+Sun, Y., Zhang, C., Dong, K., and Lang, M.. 2018. “Multiagent
+Modelling and Simulation of a Physical Internet Enabled
+Rail-Road Intermodal Transport System. ”Urban Rail Transit
+4(3):141 –154.
+Szeto, W., and Wong, S.. 2012. “Dynamic Traf ﬁc Assignment:
+Model Classi ﬁcations and Recent Advances in Travel Choice
+Principles. ”Open Engineering 2(1):1 –18.
+Treiblmaier, H., Mirkovski, K., and Lowry, P.B.. 2016.
+“Conceptualizing the Physical Internet: Literature Review,
+Implications and Directions for Future Research. ”Available
+at SSRN . Https://Ssrn.Com/Abstract =2861409.
+Walha, F., Bekrar, A., Chaabane, S., and Loukil, T.M.. 2016. “A
+Rail-Road PI-Hub Allocation Problem: Active and ReactiveApproaches. ”Computers in Industry 81(September):138 –151.
+Wang, Y., Szeto, W.Y., Han, K., and Friesz, T.L.. 2018.
+“Dynamic Traf ﬁc Assignment: A Review of the
+Methodological Advances for Environmentally SustainableRoad Transportation Applications. ”Transportation Research
+Part B: Methodological 111(May):370 –394.
+Yao, J.. 2017. “Optimisation of One-Stop Delivery Scheduling in
+Online Shopping Based on the Physical Internet. ”
+International Journal of Production Research 55(2):358 –376.
+Zhu, X., and Wilhelm, W.E. 2007. “Three-Stage Approaches for
+Optimizing Some Variations of the Resource ConstrainedShortest-Path Sub-Problem in a Column Generation Context. ”
+European Journal of Operational Research 183(2):564 –577.
+SHORT BIOGRAPHIES
+Chuanwen Dong is Assistant professor for Technology and
+Operations Management at ESCP Business School, Berlin cam-pus. He holds a Master of Engineering, a Master of Economics,and a Doctor of Business Economics. He has expertise in a widerange of quantitative operations models, with particular interest
+in sustainable supply chain management.
+Rod Franklin is Adjunct Professor of Logistics and Academic
+Director of Executive Education at K ¨uhne Logistics University.
+He received his Doctorate in Management from Case WesternReserve University in Cleveland, and has held management posi-
+tions at K ¨uhne +Nagel, USCO Logistics, etc. His research
+focuses on the application of modern management techniques tothe ef ﬁcient and effective operation of supply chains, sustainable
+business models, corporate social responsibility and cloud basedsupply chain management12 C. Dong and R. Franklin
